@@ -61,6 +61,10 @@
     .brand-fixed-wrapper.scrolled .brand-fixed {
       height: 60px; /* Logo khi cuộn cao 60px */
     }
+    .brand-fixed-wrapper a {
+        pointer-events: auto;
+        line-height: 0; /* Căn chỉnh lại logo sau khi thêm thẻ a */
+    }
     
     /* NEW: Particle Canvas Background */
     #particle-canvas {
@@ -340,7 +344,9 @@
 <body>
   <canvas id="particle-canvas" class="no-print"></canvas>
   <div class="brand-fixed-wrapper no-print">
-    <img src="logo.png" alt="Nguyễn Phi Trường Logo" class="brand-fixed" />
+    <a href="#hero" aria-label="Về đầu trang">
+      <img src="logo.png" alt="Nguyễn Phi Trường Logo" class="brand-fixed" />
+    </a>
   </div>
 
   <nav class="floating-nav no-print" aria-label="Điều hướng trang">
@@ -395,7 +401,7 @@
             <li style="--skill-index: 1;"><strong>Phần mềm chuyên nghiệp:</strong> Adobe Lightroom, Photoshop, CapCut, Canva</li>
             <li style="--skill-index: 2;"><strong>Chuyên môn Nhiếp ảnh:</strong> Event, Portrait, Lifestyle, Natural Light</li>
             <li style="--skill-index: 3;"><strong>Kỹ thuật nâng cao:</strong> Color Correction & Grading, Portrait Retouching</li>
-            <li style="--skill-index: 4;"><strong>Tư duy hình ảnh hiện đại:</strong>Sáng tạo nội dung (ảnh, video ngắn) tối ưu cho các nền tảng mạng xã hội.</li>
+            <li style="--skill-index: 4;"><strong>Thiết bị:</strong> Sony ZV-E10, Kit lens 16-50mm & các thiết bị hỗ trợ</li>
             <li style="--skill-index: 5;"><strong>Workflow:</strong> Quản lý dự án hiệu quả, tối ưu hoá quy trình hậu kỳ</li>
           </ul>
         </div>
@@ -885,6 +891,7 @@
   </script>
 </body>
 </html>
+
 
 
 
