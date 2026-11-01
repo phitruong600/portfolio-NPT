@@ -35,7 +35,8 @@
     <div class="slot"><img src="assets/film/hero-card.webp" alt="Trang đầu portfolio Nguyễn Phi Trường"></div>
   </div>
   <div class="film-ui">
-    <button class="film-btn" id="film-skip" type="button" aria-label="Bỏ qua phim mở đầu" hidden>
+    <button class="film-btn film-skip-btn" id="film-skip" type="button" aria-label="Bỏ qua phim mở đầu" hidden>
+      <span>Bỏ qua</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5l9 7-9 7z"/><path d="M18 5v14"/></svg>
     </button>
     <button class="film-btn" id="film-replay" type="button" aria-label="Xem lại phim mở đầu" hidden>
@@ -57,6 +58,7 @@
         <li><a href="#portfolio">Dự án</a></li>
         <li><a href="#services">Dịch vụ</a></li>
         <li><a href="#contact">Liên hệ</a></li>
+        <li class="menu-cta-item"><a class="menu-cta-link" href="https://zalo.me/0782800789" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.5 5.43 3.86 7.04-.15.82-.67 2.65-.77 3.09-.12.55.2.54.43.39.18-.12 2.5-1.7 3.52-2.4.94.27 1.94.42 2.96.42 5.52 0 10-4.03 10-9s-4.48-9-10-9z"/></svg>Nhắn Zalo ngay</a></li>
       </ul>
       <a class="nav-cta" href="https://zalo.me/0782800789" target="_blank" rel="noopener">Nhắn Zalo</a>
       <button class="menu-btn" id="menu-btn" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="links">
@@ -361,9 +363,14 @@
         <h2 class="h2" id="footer-title">Hãy cùng sáng tạo <span class="tail">những tác phẩm ấn tượng.</span></h2>
         <p class="lede">Nếu bạn đang tìm một người đồng hành để kể câu chuyện của mình qua hình ảnh, đừng ngần ngại kết nối.</p>
         <div class="contact-cta">
-          <a class="btn btn-dark" href="https://zalo.me/0782800789" target="_blank" rel="noopener">Nhắn Zalo</a>
-          <a class="btn btn-light" href="mailto:nguyenphitruong1807@gmail.com">Gửi email</a>
-          <a class="btn btn-light" href="tel:+84782800789">Gọi 0782 800 789</a>
+          <a class="btn btn-dark" href="https://zalo.me/0782800789" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px"><path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.5 5.43 3.86 7.04-.15.82-.67 2.65-.77 3.09-.12.55.2.54.43.39.18-.12 2.5-1.7 3.52-2.4.94.27 1.94.42 2.96.42 5.52 0 10-4.03 10-9s-4.48-9-10-9z"/></svg>
+            Nhắn Zalo: 0782 800 789
+          </a>
+          <div class="contact-cta-row">
+            <a class="btn btn-light" href="mailto:nguyenphitruong1807@gmail.com">Gửi email</a>
+            <a class="btn btn-light" href="tel:+84782800789">Gọi 0782 800 789</a>
+          </div>
         </div>
         <dl class="info">
           <div><dt>Email</dt><dd><a href="mailto:nguyenphitruong1807@gmail.com">nguyenphitruong1807@gmail.com</a></dd></div>
@@ -388,6 +395,16 @@
   <button class="lb-btn lb-p" id="lb-p" type="button" aria-label="Ảnh trước"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
   <button class="lb-btn lb-n" id="lb-n" type="button" aria-label="Ảnh sau"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
 </div>
+
+<aside class="fab-group fab-hidden" id="fab-group" aria-label="Liên hệ và điều hướng nhanh">
+  <button class="fab fab-top" id="fab-top" type="button" aria-label="Cuộn lên đầu trang">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+  <a class="fab fab-zalo" href="https://zalo.me/0782800789" target="_blank" rel="noopener" aria-label="Nhắn Zalo với Nguyễn Phi Trường">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.5 5.43 3.86 7.04-.15.82-.67 2.65-.77 3.09-.12.55.2.54.43.39.18-.12 2.5-1.7 3.52-2.4.94.27 1.94.42 2.96.42 5.52 0 10-4.03 10-9s-4.48-9-10-9z"/></svg>
+    <span>Nhắn Zalo</span>
+  </a>
+</aside>
 
 <script src="assets/site.js"></script>
 <script src="assets/film.js"></script>

@@ -729,9 +729,9 @@
     }
     words1.forEach(function (w, i) { word(w, 10.12 + 0.06 * i); });
     words2.forEach(function (w, i) { word(w, 10.36 + 0.05 * i); });
-    if (btnSkip) btnSkip.hidden = !(t > 1.2 && t < 9.9);
-    if (btnReplay) btnReplay.hidden = !(t > 11.2);
-    if (btnDown) btnDown.hidden = !(t > 11.2);
+    if (btnSkip) btnSkip.hidden = !(t > 0.4 && t < 10.0);
+    if (btnReplay) btnReplay.hidden = !(t > 10.8);
+    if (btnDown) btnDown.hidden = !(t > 10.8);
   }
 
   // ---------- seek ----------

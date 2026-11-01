@@ -24,8 +24,49 @@
       menuBtn.setAttribute('aria-label', open ? 'Đóng menu' : 'Mở menu');
     });
     doc.getElementById('links').addEventListener('click', function (e) {
-      if (e.target.closest('a')) { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+      if (e.target.closest('a')) { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.setAttribute('aria-label', 'Mở menu'); }
     });
+    doc.addEventListener('click', function (e) {
+      if (nav.classList.contains('open') && !nav.contains(e.target)) {
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', 'Mở menu');
+      }
+    });
+    doc.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', 'Mở menu');
+        menuBtn.focus();
+      }
+    });
+    window.addEventListener('scroll', function () {
+      if (nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', 'Mở menu');
+      }
+    }, { passive: true });
+  }
+
+  // ---- floating action button (zalo + back to top) ----
+  var fabGroup = doc.getElementById('fab-group');
+  var fabTop = doc.getElementById('fab-top');
+  if (fabGroup && !capture) {
+    var checkScroll = function () {
+      var y = window.scrollY || doc.documentElement.scrollTop || 0;
+      fabGroup.classList.toggle('fab-hidden', y < 350);
+    };
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    checkScroll();
+    if (fabTop) {
+      fabTop.addEventListener('click', function () {
+        var site = doc.getElementById('site');
+        if (site) site.scrollIntoView({ behavior: 'smooth' });
+        else window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
   }
 
   // ---- projects: each category card opens its own gallery in the lightbox ----
