@@ -66,7 +66,7 @@ async def main():
             if L['id']=='TILE': tile={'w':r['w'],'h':r['h'],'pad':PAD,'r':r['w']*0.28}
             else: out_layers.append({**L,'pad':PAD})
         data={'W':1440,'H':H,'hero':info['hero'],'heroBottom':hero_h,'sections':info['sections'],'marks':info['marks'],'bands':bands,'layers':out_layers,'tile':tile}
-        json.dump(data,open(f'{OUT}/layers.json','w'),indent=1,ensure_ascii=False)
+        json.dump(data,open(f'{OUT}/layers.json','w',encoding='utf-8'),indent=1,ensure_ascii=False)
         await b.close()
     httpd.shutdown()
 asyncio.run(main())
