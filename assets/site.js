@@ -124,17 +124,41 @@
     });
   }
 
-  // ---- hero: the grading sliders settle into place once the hero is in view ----
-  var hero = doc.getElementById('hero');
+  // ---- project tabs: one group at a time ----
+  var tabs = Array.prototype.slice.call(doc.querySelectorAll('.pf-tab'));
+  function selectTab(tab, focus) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      var panel = doc.getElementById(t.getAttribute('aria-controls'));
+      if (panel) panel.hidden = !on;
+    });
+    if (focus) tab.focus();
+    var grid = doc.querySelector('#' + tab.getAttribute('aria-controls') + ' .pf-grid');
+    if (grid) grid.scrollLeft = 0;
+    var bar = tab.parentNode;   // phones: the tab row scrolls sideways, keep the chosen tab in view
+    if (bar.scrollWidth > bar.clientWidth) bar.scrollTo({ left: tab.offsetLeft - bar.offsetLeft - 16, behavior: 'smooth' });
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { selectTab(t); });
+    t.addEventListener('keydown', function (e) {
+      var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (k) { e.preventDefault(); selectTab(tabs[(i + k + tabs.length) % tabs.length], true); }
+    });
+  });
+
+  // ---- grading palette: the sliders settle into place once the section is in view ----
+  var grade = doc.getElementById('grade');
   var reduceMotion = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (hero && !capture && !reduceMotion && 'IntersectionObserver' in window) {
+  if (grade && !capture && !reduceMotion && 'IntersectionObserver' in window) {
     doc.documentElement.classList.add('js-anim');
-    var heroIO = new IntersectionObserver(function (e) {
+    var gradeIO = new IntersectionObserver(function (e) {
       if (!e[0].isIntersecting) return;
-      setTimeout(function () { hero.classList.add('go'); }, 250);
-      heroIO.disconnect();
+      setTimeout(function () { grade.classList.add('go'); }, 250);
+      gradeIO.disconnect();
     }, { threshold: 0.35 });
-    heroIO.observe(hero);
+    gradeIO.observe(grade);
   }
 
   if (lb) {

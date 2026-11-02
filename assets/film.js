@@ -86,6 +86,20 @@
     return L;
   }
 
+  // ---------- hand over to the page: once the closing line has settled, glide down to the site ----------
+  var HANDOVER_T = 11.8;          // film seconds
+  var handedOver = false;
+  function goSite() {
+    handedOver = true;
+    var site = doc.getElementById('site');
+    if (site) site.scrollIntoView({ behavior: REDUCED ? 'auto' : 'smooth', block: 'start' });
+  }
+  function maybeHandOver() {
+    if (handedOver || STILL !== null) return;
+    // leave readers who already scrolled on their own where they are
+    if ((window.scrollY || root.scrollTop || 0) < intro.offsetHeight * 0.4) goSite(); else handedOver = true;
+  }
+
   // ---------- static fallback (no WebGL2, reduced motion, errors) ----------
   function goStatic(cls) {
     intro.classList.add(cls || 'static');
@@ -96,6 +110,7 @@
     if (btnDown) btnDown.hidden = false;
     canvas.style.display = 'none';
     window.__filmReady = true;
+    if (!REDUCED && STILL === null) setTimeout(maybeHandOver, 2600);
   }
 
   var gl = null;
@@ -748,6 +763,7 @@
   }
   window.filmSeek = function (t) { seek(t); return true; };
   window.filmRate = function (t) { return flightRate(t); };
+  window.filmPlayFrom = function (t) { if (RT) play(t); return !!RT; };   // checks: jump the playback clock
   window.filmSpeed = function (t, dt) {
     dt = dt || 1 / 120; var a = camAt(t), b = camAt(t + dt), P = [720, a.Ly, 0];
     var pa = project(a, P), pb = project(b, P);
@@ -820,11 +836,13 @@
       }
     }
     seek(clock);
+    if (clock >= HANDOVER_T) maybeHandOver();
     if (clock < T_STOP || clock < 60) schedule();
   }
   function schedule() { if (!raf && playing && visible) raf = requestAnimationFrame(tick); }
-  function play(from) { clock = from; last = null; playing = true; schedule(); }
-  if (btnSkip) btnSkip.addEventListener('click', function () { clock = Math.max(clock, 10.0); last = null; schedule(); });
+  function play(from) { clock = from; last = null; playing = true; handedOver = false; schedule(); }
+  // skip: settle on the title card and go straight to the site
+  if (btnSkip) btnSkip.addEventListener('click', function () { clock = Math.max(clock, 11.0); last = null; schedule(); goSite(); });
   if (btnReplay) btnReplay.addEventListener('click', function () { play(0); });
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function (e) {

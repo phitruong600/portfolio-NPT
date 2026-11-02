@@ -12,7 +12,7 @@ os.makedirs(OUT, exist_ok=True)
 for f in os.listdir(OUT): os.remove(os.path.join(OUT,f))
 JS_MEASURE = """()=>{
  const R=e=>{const b=e.getBoundingClientRect();return {x:b.left+scrollX,y:b.top+scrollY,w:b.width,h:b.height}};
- const els=[...document.querySelectorAll('[data-layer]:not([data-layer=tile-hi])')];
+ const els=[...document.querySelectorAll('[data-layer]:not([data-layer=tile-hi])')].filter(e=>{const b=e.getBoundingClientRect();return b.width>0&&b.height>0});
  const layers=els.map((e,i)=>{e.dataset.lid='L'+i; const cs=getComputedStyle(e);
    return {id:'L'+i,kind:e.dataset.layer,role:e.dataset.role||'',r:parseFloat(cs.borderTopLeftRadius)||0,...R(e),
            label:(e.innerText||'').trim().slice(0,28)}});

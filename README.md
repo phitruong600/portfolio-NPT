@@ -5,9 +5,12 @@ Trang đang chạy tại https://phitruong600.github.io/portfolio-NPT/
 
 ## Các mục trên trang
 
-Giới thiệu · Kinh nghiệm (Unite Group) · Dự án · Nền tảng & Công cụ · Dịch vụ và quy trình · Liên hệ
+Giới thiệu (ảnh chân dung, tên, vài dòng về mình) · Năng lực · Dự án · Hậu kỳ (khung hình vàng và bảng màu) · Kinh nghiệm · Công cụ · Dịch vụ và quy trình · Liên hệ
 
-Mục Dự án chia theo mảng (bấm ảnh bìa để xem trọn bộ ảnh hoặc video):
+Phim mở đầu chạy xong sẽ tự cuộn xuống đầu trang; bấm "Bỏ qua" để xuống ngay.
+Tên các app và công cụ hiện bằng icon nét vàng; rê chuột vào icon để thấy tên.
+
+Mục Dự án chia bốn thẻ (bấm ảnh bìa để xem trọn bộ ảnh hoặc video):
 
 - Sản phẩm số & Công cụ: trang tuyển dụng, Unite Staycation, bảng vinh danh, GanLoGo, AI Agency Studio, chính trang portfolio này (kèm link trải nghiệm và mã nguồn)
 - Thiết kế đồ họa & Truyền thông: Sân Khấu Mới (Nhà hát Trần Hữu Trang), Leadership Sói Đầu Đàn, linh vật Nai Con, ấn phẩm Fanpage Unite Group, biểu trưng PT
@@ -24,7 +27,8 @@ Màu chính: Vàng ấm #E5C158, Champagne #F9F6F0, Ngà #FFFBF5, Đồng #8C6A3
 ## Cấu trúc
 
 - `index.html`: nội dung trang
-- `assets/site.css`, `assets/site.js`: giao diện, menu, nút Zalo nổi, bộ ảnh và video của từng dự án, xem ảnh lớn
+- `assets/site.css`, `assets/site.js`: giao diện, menu, nút Zalo nổi, thẻ chia nhóm dự án, bộ ảnh và video của từng dự án, xem ảnh lớn
+- bộ icon nằm ngay đầu `index.html` (khối `<svg class="sprite">`)
 - `assets/film.js`: phim mở đầu; mọi khung hình được tính từ thời gian (hàm `seek(t)`)
 - `assets/film/`: ảnh chụp trang và các lớp nổi mà phim dùng
 - `assets/img/`: ảnh đã nén cho web (bản 900 px cho trang, bản 1600–1800 px khi xem lớn), logo PT, ảnh chia sẻ mạng xã hội `og-cover.jpg`
