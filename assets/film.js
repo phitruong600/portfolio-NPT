@@ -176,7 +176,7 @@
     'void main(){ vec2 lo=uRect.xy, hi=uRect.zw; vec2 cen=(lo+hi)*0.5, hs=(hi-lo)*0.5; vec2 p=vW.xy-cen; float cr=min(uCorner,min(hs.x,hs.y));\n' +
     ' float low=p.y-hs.y, high=p.y+hs.y; float st=clamp(-3.0*uSigma,low,high), en=clamp(3.0*uSigma,low,high); float stp=(en-st)/4.0; float y=st+stp*0.5; float v=0.0;\n' +
     ' for(int i=0;i<4;i++){ v+=boxX(p.x,p.y-y,uSigma,cr,hs)*gauss(y,uSigma)*stp; y+=stp; }\n' +
-    ' float a=clamp(v,0.0,1.0)*uOpacity; o0=vec4(vec3(0.102,0.129,0.2)*a,a); }';
+    ' float a=clamp(v,0.0,1.0)*uOpacity; o0=vec4(vec3(0.29,0.2,0.08)*a,a); }';
 
   var FS_NEAR_DOWN = HEAD +
     'in vec2 vUv; uniform sampler2D uCoc; uniform vec2 uSrcTexel; out vec4 o;\n' +
@@ -523,7 +523,7 @@
   }
 
   // ---------- draw ----------
-  var FL0 = [249 / 255, 251 / 255, 251 / 255], FL1 = [242 / 255, 243 / 255, 246 / 255];
+  var FL0 = [246 / 255, 239 / 255, 226 / 255], FL1 = [227 / 255, 212 / 255, 184 / 255];   // ivory floor, matches .intro
   function setCam(P, cam) {
     var u = P.u;
     gl.uniform3fv(u.uC, cam.C); gl.uniform3fv(u.uR, cam.R); gl.uniform3fv(u.uU, cam.U); gl.uniform3fv(u.uF, cam.F);
@@ -666,7 +666,7 @@
     var corners = [g.O, [g.O[0] + g.Eu[0], g.O[1], g.O[2]], [g.O[0], g.O[1] + g.Ev[1], g.O[2] + g.Ev[2]], [g.O[0] + g.Eu[0], g.O[1] + g.Ev[1], g.O[2] + g.Ev[2]]];
     if (!onScreen(cam, corners)) return;
     var alpha = 1;
-    // shadow on whatever is under it: flat #1a2133, offset (0.10z, 4+0.36z), blur 7+0.5z, 26%
+    // shadow on whatever is under it: flat warm brown #4a3314, offset (0.10z, 4+0.36z), blur 7+0.5z, 26%
     gl.drawBuffers(DB_COLOR);
     gl.useProgram(P_SH.p); setCam(P_SH, cam);
     var foot = (L.h / 2) * Math.cos(st.phi);
@@ -683,7 +683,7 @@
       var bx = g.cx - L.w / 2 + r, bw = L.w - 2 * r;
       var by = [g.cx, g.cy + (L.h / 2) * g.vd[1], g.z + (L.h / 2) * g.vd[2]];
       var n = [0, Math.sin(st.phi), Math.cos(st.phi)];
-      gl.uniform4f(u.uTint, 0.955, 0.96, 0.968, 1);
+      gl.uniform4f(u.uTint, 0.965, 0.93, 0.86, 1);
       quad(P_TEX, [bx, by[1], by[2]], [bw, 0, 0], [0, -T * n[1], -T * n[2]]);
       gl.uniform4f(u.uTint, 0, 0, 0, 0);
     }

@@ -23,50 +23,34 @@
       menuBtn.setAttribute('aria-expanded', String(open));
       menuBtn.setAttribute('aria-label', open ? 'Đóng menu' : 'Mở menu');
     });
-    doc.getElementById('links').addEventListener('click', function (e) {
-      if (e.target.closest('a')) { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.setAttribute('aria-label', 'Mở menu'); }
-    });
-    doc.addEventListener('click', function (e) {
-      if (nav.classList.contains('open') && !nav.contains(e.target)) {
-        nav.classList.remove('open');
-        menuBtn.setAttribute('aria-expanded', 'false');
-        menuBtn.setAttribute('aria-label', 'Mở menu');
-      }
-    });
-    doc.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && nav.classList.contains('open')) {
-        nav.classList.remove('open');
-        menuBtn.setAttribute('aria-expanded', 'false');
-        menuBtn.setAttribute('aria-label', 'Mở menu');
-        menuBtn.focus();
-      }
-    });
-    window.addEventListener('scroll', function () {
-      if (nav.classList.contains('open')) {
-        nav.classList.remove('open');
-        menuBtn.setAttribute('aria-expanded', 'false');
-        menuBtn.setAttribute('aria-label', 'Mở menu');
-      }
-    }, { passive: true });
+    var closeMenu = function (focusBtn) {
+      if (!nav.classList.contains('open')) return;
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.setAttribute('aria-label', 'Mở menu');
+      if (focusBtn) menuBtn.focus();
+    };
+    doc.getElementById('links').addEventListener('click', function (e) { if (e.target.closest('a')) closeMenu(); });
+    doc.addEventListener('click', function (e) { if (!nav.contains(e.target)) closeMenu(); });
+    doc.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(true); });
+    window.addEventListener('scroll', function () { closeMenu(); }, { passive: true });
   }
 
-  // ---- floating action button (zalo + back to top) ----
-  var fabGroup = doc.getElementById('fab-group');
-  var fabTop = doc.getElementById('fab-top');
+  // ---- floating Zalo and back-to-top: shown once the page has been scrolled ----
+  var fabGroup = doc.getElementById('fab-group'), fabTop = doc.getElementById('fab-top');
   if (fabGroup && !capture) {
-    var checkScroll = function () {
+    var siteTop = doc.getElementById('site');
+    var checkFab = function () {
       var y = window.scrollY || doc.documentElement.scrollTop || 0;
-      fabGroup.classList.toggle('fab-hidden', y < 350);
+      var start = siteTop ? siteTop.offsetTop : 0;
+      fabGroup.classList.toggle('fab-hidden', y < start + 350);
     };
-    window.addEventListener('scroll', checkScroll, { passive: true });
-    checkScroll();
-    if (fabTop) {
-      fabTop.addEventListener('click', function () {
-        var site = doc.getElementById('site');
-        if (site) site.scrollIntoView({ behavior: 'smooth' });
-        else window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
+    window.addEventListener('scroll', checkFab, { passive: true });
+    window.addEventListener('resize', checkFab);
+    checkFab();
+    if (fabTop) fabTop.addEventListener('click', function () {
+      if (siteTop) siteTop.scrollIntoView({ behavior: 'smooth' }); else window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 
   // ---- projects: each category card opens its own gallery in the lightbox ----
@@ -103,6 +87,42 @@
   Array.prototype.forEach.call(doc.querySelectorAll('[data-pf]'), function (b) {
     b.addEventListener('click', function () { openSet(b.closest('.pf-card')); });
   });
+  // ---- fanned deck: arrows turn it, the front card opens its category ----
+  var deck = doc.querySelector('.fan-deck');
+  if (deck) {
+    var fan = Array.prototype.slice.call(deck.querySelectorAll('.fan-card')), nf = fan.length, front = Math.floor(nf / 2);
+    var layFan = function () {
+      fan.forEach(function (c, i) {
+        var k = ((i - front) % nf + nf) % nf; if (k > nf / 2) k -= nf;
+        c.style.setProperty('--k', k); c.style.setProperty('--a', Math.abs(k)); c.setAttribute('data-k', k);
+      });
+    };
+    layFan();
+    Array.prototype.forEach.call(doc.querySelectorAll('.fan-nav'), function (b) {
+      b.addEventListener('click', function () { front = (front + Number(b.getAttribute('data-step')) + nf) % nf; layFan(); });
+    });
+    fan.forEach(function (c, i) {
+      c.addEventListener('click', function () {
+        if (c.getAttribute('data-k') !== '0') { front = i; layFan(); return; }
+        var card = doc.getElementById(c.getAttribute('data-open'));
+        if (card) openSet(card);
+      });
+    });
+  }
+
+  // ---- hero: the grading sliders settle into place once the hero is in view ----
+  var hero = doc.getElementById('hero');
+  var reduceMotion = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (hero && !capture && !reduceMotion && 'IntersectionObserver' in window) {
+    doc.documentElement.classList.add('js-anim');
+    var heroIO = new IntersectionObserver(function (e) {
+      if (!e[0].isIntersecting) return;
+      setTimeout(function () { hero.classList.add('go'); }, 250);
+      heroIO.disconnect();
+    }, { threshold: 0.35 });
+    heroIO.observe(hero);
+  }
+
   if (lb) {
     doc.getElementById('lb-x').addEventListener('click', close);
     doc.getElementById('lb-p').addEventListener('click', function () { show(cur - 1); });

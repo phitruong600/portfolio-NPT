@@ -21,7 +21,7 @@ JS_MEASURE = """()=>{
  const about=document.querySelector('#about .h2'), ft=document.getElementById('footer-title');
  return {H:document.documentElement.scrollHeight, W:document.documentElement.scrollWidth, layers,
    hero:sec('hero'), sections:Object.fromEntries([...document.querySelectorAll('main > section[id]')].map(s=>[s.id,sec(s.id)])),
-   marks:{s2Title:R(about), footerTitle:line(ft), mock:R(document.querySelector('.mock'))}};
+   marks:{s2Title:R(about), footerTitle:line(ft)}};
 }"""
 async def main():
     httpd,url=serve(ROOT)
