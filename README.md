@@ -7,14 +7,14 @@ Trang đang chạy tại https://phitruong600.github.io/portfolio-NPT/
 
 Giới thiệu · Kinh nghiệm (Unite Group) · Dự án · Nền tảng & Công cụ · Dịch vụ và quy trình · Liên hệ
 
-Mục Dự án chia theo mảng:
+Mục Dự án chia theo mảng (bấm ảnh bìa để xem trọn bộ ảnh hoặc video):
 
-- Sản phẩm số & Công cụ: trang tuyển dụng, Unite Staycation, bảng vinh danh, Brand Image Studio
-- Thiết kế đồ họa & Truyền thông: Sân Khấu Mới, Leadership Sói Đầu Đàn, linh vật Nai Con, logo NPT
-- Sản xuất Video & Nội dung: The Goldview, Fight100, kênh TikTok CEO, AI Agency Studio
-- Nhiếp ảnh & Hậu kỳ: Chân dung, Sự kiện cộng đồng, Nội thất & BĐS, Phong cảnh & Đời sống (bấm ảnh để xem cả bộ)
+- Sản phẩm số & Công cụ: trang tuyển dụng, Unite Staycation, bảng vinh danh, GanLoGo, AI Agency Studio, chính trang portfolio này (kèm link trải nghiệm và mã nguồn)
+- Thiết kế đồ họa & Truyền thông: Sân Khấu Mới (Nhà hát Trần Hữu Trang), Leadership Sói Đầu Đàn, linh vật Nai Con, ấn phẩm Fanpage Unite Group, biểu trưng PT
+- Sản xuất Video & Nội dung: vlog Fight100, kênh TikTok CEO, AI Motion TT Genesis
+- Nhiếp ảnh & Hậu kỳ: Chân dung, Sự kiện cộng đồng, Sự kiện doanh nghiệp, Nội thất & Kiến trúc, Sản phẩm thương mại, Phong cảnh & Đời sống
 
-Muốn thêm ảnh hoặc link, gửi cho Claude (hoặc bỏ vào thư mục `media` theo từng mảng) để Claude nén ảnh và cập nhật trang.
+Ảnh, video và link trên trang lấy từ thư mục `media`. Muốn thêm hoặc đổi, bỏ file vào đúng mảng trong `media` (và điền link vào `THONG_TIN_VA_LINK.txt`) rồi nhắn Claude để nén và cập nhật trang.
 
 ## Giao diện
 
@@ -24,12 +24,13 @@ Màu chính: Vàng ấm #E5C158, Champagne #F9F6F0, Ngà #FFFBF5, Đồng #8C6A3
 ## Cấu trúc
 
 - `index.html`: nội dung trang
-- `assets/site.css`, `assets/site.js`: giao diện, menu, nút Zalo nổi, bộ ảnh của từng mảng, xem ảnh lớn
+- `assets/site.css`, `assets/site.js`: giao diện, menu, nút Zalo nổi, bộ ảnh và video của từng dự án, xem ảnh lớn
 - `assets/film.js`: phim mở đầu; mọi khung hình được tính từ thời gian (hàm `seek(t)`)
 - `assets/film/`: ảnh chụp trang và các lớp nổi mà phim dùng
-- `assets/img/`: ảnh đã nén cho web (bản 900 px cho trang, bản 1800 px khi xem lớn)
+- `assets/img/`: ảnh đã nén cho web (bản 900 px cho trang, bản 1600–1800 px khi xem lớn), logo PT, ảnh chia sẻ mạng xã hội `og-cover.jpg`
+- `assets/video/`: video dọc nén cho web (Sói Đầu Đàn, Marketing Thực Chiến, TT Genesis)
 - `assets/fonts/`: phông chữ có dấu tiếng Việt
-- `assets/CV_Nguyen_Phi_Truong.pdf`: CV tải về
+- `assets/CV_Nguyen_Phi_Truong.pdf`: CV tải về (bản một trang)
 - `media/`: kho tài nguyên gốc theo từng mảng (không hiện trên trang)
 
 Sau khi sửa chữ hay ảnh trong `index.html`, chụp lại cho phim để phim khớp với trang:

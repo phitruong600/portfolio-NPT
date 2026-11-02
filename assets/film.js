@@ -325,8 +325,14 @@
     g = integrate(speedFn(c), V);
     var y0 = yS2 - glide(g, 1.6);
     TL = { V: V, c: c, g: g, y0: y0, H: H, yS2: yS2, yFt: yFt, toff: 0 };
+    // a longer page would make the glide faster on screen: past CRUISE_MAX page px/s the flight is
+    // played slower in real time instead, so the motion keeps the pace of the original cut
+    TL.rate = Math.min(1, CRUISE_MAX / (c * V));
     return TL;
   }
+  var CRUISE_MAX = 1100;
+  // film seconds per real second: TL.rate from the first glide to the end of the cruise, 1 elsewhere
+  function flightRate(t) { return TL ? 1 - (1 - TL.rate) * (sstep(0.2, 0.8, t) - sstep(7.3, 8.0, t)) : 1; }
 
   // per-viewport camera constants
   function solveViewport() {
@@ -741,6 +747,7 @@
     domAt(t);
   }
   window.filmSeek = function (t) { seek(t); return true; };
+  window.filmRate = function (t) { return flightRate(t); };
   window.filmSpeed = function (t, dt) {
     dt = dt || 1 / 120; var a = camAt(t), b = camAt(t + dt), P = [720, a.Ly, 0];
     var pa = project(a, P), pb = project(b, P);
@@ -801,7 +808,7 @@
     if (!playing) return;
     if (last === null) last = now;
     var dt = Math.min(0.1, (now - last) / 1000); last = now;
-    clock += dt;
+    clock += dt * flightRate(clock);
     // adaptive resolution during the first seconds of flight
     if (clock > 0.3 && clock < 3 && dt > 0) {
       frameTimes.push(dt);
