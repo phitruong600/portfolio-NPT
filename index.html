@@ -29,16 +29,15 @@
   <canvas id="film" class="film-canvas" aria-hidden="true"></canvas>
   <div class="film-loader" aria-hidden="true">
     <svg viewBox="0 0 94 94"><circle cx="47" cy="47" r="45"/></svg>
-    <img src="assets/img/logo-mark-192.png" alt="">
+    <img src="assets/img/logo-3d.webp" alt="">
   </div>
   <div class="endcard">
-    <div class="badge"><img src="assets/img/logo-mark-192.png" alt="" width="152" height="192"><span>Nguyễn Phi Trường</span></div>
+    <div class="badge"><img src="assets/img/logo-3d-mark.webp" alt="" width="115" height="144"><span>Nguyễn Phi Trường</span></div>
     <p class="closing"><span class="l1">Mỗi bức ảnh là một câu chuyện,</span><span class="l2">mỗi câu chuyện là một kỷ niệm.</span></p>
     <div class="slot"><img src="assets/film/hero-card.webp" alt="Trang đầu portfolio Nguyễn Phi Trường"></div>
   </div>
   <div class="film-ui">
-    <button class="film-btn film-skip-btn" id="film-skip" type="button" aria-label="Bỏ qua phim mở đầu" hidden>
-      <span>Bỏ qua</span>
+    <button class="film-btn film-skip-btn" id="film-skip" type="button" aria-label="Bỏ qua phim mở đầu" data-tip="Bỏ qua" hidden>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5l9 7-9 7z"/><path d="M18 5v14"/></svg>
     </button>
     <button class="film-btn" id="film-replay" type="button" aria-label="Xem lại phim mở đầu" hidden>
@@ -53,7 +52,7 @@
 <div id="site" class="sheet">
   <header class="nav" id="nav">
     <div class="wrap nav-in">
-      <a class="brand" href="#site"><img src="assets/img/logo-mark-192.png" alt="" width="152" height="192"><span>Nguyễn Phi Trường</span></a>
+      <a class="brand" href="#site"><img src="assets/img/logo-3d-mark.webp" alt="" width="115" height="144"><span>Nguyễn Phi Trường</span></a>
       <ul class="links" id="links">
         <li><a href="#about">Năng lực</a></li>
         <li><a href="#portfolio">Dự án</a></li>
@@ -86,9 +85,9 @@
               <figcaption class="portrait-badge"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span><b>TP. Hồ Chí Minh</b><small>Creating Visuals. Building Digital Experiences.</small></span></figcaption>
             </figure>
             <figure class="hero-snap" data-layer="photo"><img src="assets/img/truong-may-anh-900.webp" alt="Nguyễn Phi Trường cầm máy ảnh" width="897" height="900"></figure>
-            <span class="orb orb-1" data-layer="chip" data-role="hero-chip" data-tip="Lightroom"><svg class="ico" aria-hidden="true"><use href="#i-sliders"/></svg><span class="vh">Lightroom</span></span>
-            <span class="orb orb-2" data-layer="chip" data-role="hero-chip" data-tip="Photoshop"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg><span class="vh">Photoshop</span></span>
-            <span class="orb orb-3" data-layer="chip" data-role="hero-chip" data-tip="CapCut"><svg class="ico" aria-hidden="true"><use href="#i-scissors"/></svg><span class="vh">CapCut</span></span>
+            <span class="orb orb-1" data-layer="chip" data-role="hero-chip" data-tip="Lightroom"><img class="tl" src="assets/img/tools/lightroom.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Lightroom</span></span>
+            <span class="orb orb-2" data-layer="chip" data-role="hero-chip" data-tip="Photoshop"><img class="tl" src="assets/img/tools/photoshop.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Photoshop</span></span>
+            <span class="orb orb-3" data-layer="chip" data-role="hero-chip" data-tip="CapCut"><img class="tl" src="assets/img/tools/capcut.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">CapCut</span></span>
             <span class="orb orb-4" data-layer="chip" data-tip="AI"><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg><span class="vh">AI</span></span>
             <div class="logo3d" data-logo3d data-layer="tile" data-role="logo-tile" data-tip="Kéo để xoay logo"><img class="logo3d-still" src="assets/img/logo-3d.webp" alt="Biểu trưng PT mạ vàng" width="560" height="560" decoding="async"></div>
             <span class="grid-patch gp-hero" aria-hidden="true"></span>
@@ -128,11 +127,11 @@
           <li class="chip" data-layer="chip" data-role="s2-fly-right"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg>Tính ứng dụng thực tế</li>
         </ul>
         <div class="skills">
-          <article class="skill" data-layer="card"><span class="skill-ico"><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg></span><h3>Nhiếp ảnh &amp; Hậu kỳ</h3><p>Sự kiện, chân dung, nội thất, BĐS; color grading và retouch tự nhiên.</p><ul class="tools" aria-label="Công cụ"><li data-tip="Lightroom"><svg class="ico" aria-hidden="true"><use href="#i-sliders"/></svg><span class="vh">Lightroom</span></li><li data-tip="Photoshop"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg><span class="vh">Photoshop</span></li><li data-tip="Hypic"><svg class="ico" aria-hidden="true"><use href="#i-wand"/></svg><span class="vh">Hypic</span></li></ul></article>
-          <article class="skill" data-layer="card"><span class="skill-ico"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg></span><h3>Thiết kế đồ họa</h3><p>Poster, key visual, mascot và ấn phẩm cho thương hiệu, tuyển dụng.</p><ul class="tools" aria-label="Công cụ"><li data-tip="Canva"><svg class="ico" aria-hidden="true"><use href="#i-palette"/></svg><span class="vh">Canva</span></li><li data-tip="Photoshop"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg><span class="vh">Photoshop</span></li><li data-tip="AI tools"><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg><span class="vh">AI tools</span></li></ul></article>
-          <article class="skill" data-layer="card"><span class="skill-ico"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg></span><h3>Video &amp; Motion</h3><p>Video dọc TikTok/Reels, video BĐS, video loop, AI Motion và kịch bản.</p><ul class="tools" aria-label="Công cụ"><li data-tip="CapCut"><svg class="ico" aria-hidden="true"><use href="#i-scissors"/></svg><span class="vh">CapCut</span></li><li data-tip="AI Motion"><svg class="ico" aria-hidden="true"><use href="#i-filmspark"/></svg><span class="vh">AI Motion</span></li><li data-tip="Kịch bản"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><span class="vh">Kịch bản</span></li></ul></article>
-          <article class="skill" data-layer="card"><span class="skill-ico"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg></span><h3>Web &amp; Công cụ</h3><p>Website tuyển dụng, vinh danh, kinh doanh và công cụ xử lý ảnh hàng loạt.</p><ul class="tools" aria-label="Công cụ"><li data-tip="HTML5"><svg class="ico" aria-hidden="true"><use href="#i-filecode"/></svg><span class="vh">HTML5</span></li><li data-tip="React"><svg class="ico" aria-hidden="true"><use href="#i-blocks"/></svg><span class="vh">React</span></li><li data-tip="Supabase"><svg class="ico" aria-hidden="true"><use href="#i-database"/></svg><span class="vh">Supabase</span></li><li data-tip="Apps Script"><svg class="ico" aria-hidden="true"><use href="#i-sheet"/></svg><span class="vh">Apps Script</span></li></ul></article>
-          <article class="skill" data-layer="card"><span class="skill-ico"><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg></span><h3>AI &amp; Workflow</h3><p>AI cho nội dung, motion, code web và quy trình nhiều AI Agent.</p><ul class="tools" aria-label="Công cụ"><li data-tip="Claude"><svg class="ico" aria-hidden="true"><use href="#i-chatspark"/></svg><span class="vh">Claude</span></li><li data-tip="Codex"><svg class="ico" aria-hidden="true"><use href="#i-terminal"/></svg><span class="vh">Codex</span></li><li data-tip="Antigravity"><svg class="ico" aria-hidden="true"><use href="#i-orbit"/></svg><span class="vh">Antigravity</span></li><li data-tip="OpenCode"><svg class="ico" aria-hidden="true"><use href="#i-window"/></svg><span class="vh">OpenCode</span></li></ul></article>
+          <article class="skill" data-layer="card"><span class="skill-ico"><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg></span><h3>Nhiếp ảnh &amp; Hậu kỳ</h3><p>Sự kiện, chân dung, nội thất, BĐS; color grading và retouch tự nhiên.</p><ul class="tools" aria-label="Công cụ"><li data-tip="Lightroom"><img class="tl" src="assets/img/tools/lightroom.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Lightroom</span></li><li data-tip="Photoshop"><img class="tl" src="assets/img/tools/photoshop.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Photoshop</span></li><li data-tip="Hypic"><img class="tl" src="assets/img/tools/hypic.webp" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Hypic</span></li></ul></article>
+          <article class="skill" data-layer="card"><span class="skill-ico"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg></span><h3>Thiết kế đồ họa</h3><p>Poster, key visual, mascot và ấn phẩm cho thương hiệu, tuyển dụng.</p><ul class="tools" aria-label="Công cụ"><li data-tip="Canva"><img class="tl" src="assets/img/tools/canva.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Canva</span></li><li data-tip="Photoshop"><img class="tl" src="assets/img/tools/photoshop.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Photoshop</span></li><li data-tip="AI tools"><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg><span class="vh">AI tools</span></li></ul></article>
+          <article class="skill" data-layer="card"><span class="skill-ico"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg></span><h3>Video &amp; Motion</h3><p>Video dọc TikTok/Reels, video BĐS, video loop, AI Motion và kịch bản.</p><ul class="tools" aria-label="Công cụ"><li data-tip="CapCut"><img class="tl" src="assets/img/tools/capcut.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">CapCut</span></li><li data-tip="AI Motion"><img class="tl" src="assets/img/tools/ai-motion.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">AI Motion</span></li><li data-tip="Kịch bản"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><span class="vh">Kịch bản</span></li></ul></article>
+          <article class="skill" data-layer="card"><span class="skill-ico"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg></span><h3>Web &amp; Công cụ</h3><p>Website tuyển dụng, vinh danh, kinh doanh và công cụ xử lý ảnh hàng loạt.</p><ul class="tools" aria-label="Công cụ"><li data-tip="HTML5"><img class="tl" src="assets/img/tools/html5.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">HTML5</span></li><li data-tip="React"><img class="tl" src="assets/img/tools/react.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">React</span></li><li data-tip="Supabase"><img class="tl" src="assets/img/tools/supabase.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Supabase</span></li><li data-tip="Apps Script"><img class="tl" src="assets/img/tools/apps-script.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Apps Script</span></li></ul></article>
+          <article class="skill" data-layer="card"><span class="skill-ico"><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg></span><h3>AI &amp; Workflow</h3><p>AI cho nội dung, motion, code web và quy trình nhiều AI Agent.</p><ul class="tools" aria-label="Công cụ"><li data-tip="Claude"><img class="tl" src="assets/img/tools/claude.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Claude</span></li><li data-tip="Codex"><img class="tl" src="assets/img/tools/codex.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Codex</span></li><li data-tip="Antigravity"><img class="tl" src="assets/img/tools/antigravity.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Antigravity</span></li><li data-tip="OpenCode"><img class="tl" src="assets/img/tools/opencode.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">OpenCode</span></li></ul></article>
         </div>
       </div>
     </section>
@@ -148,279 +147,27 @@
             <div class="fan-row">
               <button class="fan-nav" type="button" data-step="-1" aria-label="Nhóm trước"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
               <div class="fan-deck">
-              <button class="fan-card" data-k="-2" style="--k:-2;--a:2" type="button" data-open="pf-san-pham" data-g="Nhiếp ảnh" data-n="5 ảnh" aria-label="Sản phẩm thương mại, 5 ảnh"><img src="assets/img/sp-toan-canh-420.webp" alt="" decoding="async"></button>
-              <button class="fan-card" data-k="-1" style="--k:-1;--a:1" type="button" data-open="pf-su-kien-cong-dong" data-g="Nhiếp ảnh" data-n="17 ảnh" aria-label="Sự kiện cộng đồng, 17 ảnh"><img src="assets/img/cong-dong-mua-vang-420.webp" alt="" decoding="async"></button>
-              <button class="fan-card" data-k="0" style="--k:0;--a:0" type="button" data-open="pf-chan-dung" data-g="Nhiếp ảnh" data-n="7 ảnh" aria-label="Chân dung nghệ thuật, 7 ảnh"><img src="assets/img/cd-van-phong-420.webp" alt="" decoding="async"></button>
-              <button class="fan-card" data-k="1" style="--k:1;--a:1" type="button" data-open="pf-nai-con" data-g="Thiết kế" data-n="6 ảnh" aria-label="Linh vật Nai Con, 6 ảnh"><img src="assets/img/nai-con-casting-420.webp" alt="" decoding="async"></button>
-              <button class="fan-card" data-k="2" style="--k:2;--a:2" type="button" data-open="pf-phong-canh" data-g="Nhiếp ảnh" data-n="10 ảnh" aria-label="Phong cảnh và đời sống, 10 ảnh"><img src="assets/img/pc-suong-som-420.webp" alt="" decoding="async"></button>
+              <button class="fan-card" data-k="-2" style="--k:-2;--a:2" type="button" data-open="pf-chan-dung" data-g="Nhiếp ảnh" data-n="7 ảnh" aria-label="Chân dung nghệ thuật, 7 ảnh"><img src="assets/img/cd-van-phong-420.webp" alt="" decoding="async"></button>
+              <button class="fan-card" data-k="-1" style="--k:-1;--a:1" type="button" data-open="pf-noi-that" data-g="Nhiếp ảnh" data-n="5 ảnh" aria-label="Nội thất &amp; Kiến trúc, 5 ảnh"><img src="assets/img/nt-phong-an-420.webp" alt="" decoding="async"></button>
+              <button class="fan-card" data-k="0" style="--k:0;--a:0" type="button" data-open="pf-su-kien-cong-dong" data-g="Nhiếp ảnh" data-n="17 ảnh" aria-label="Lễ hội &amp; Văn hóa, 17 ảnh"><img src="assets/img/cong-dong-mua-vang-420.webp" alt="" decoding="async"></button>
+              <button class="fan-card" data-k="1" style="--k:1;--a:1" type="button" data-open="album-bds" data-g="Video BĐS" data-n="4 video" aria-label="Video bất động sản, 4 video"><img src="assets/img/bds-review-poster-420.webp" alt="" decoding="async"></button>
+              <button class="fan-card" data-k="2" style="--k:2;--a:2" type="button" data-open="album-gom" data-g="Văn hóa" data-n="2 video" aria-label="Làng gốm, 2 video"><img src="assets/img/gom-2-poster-420.webp" alt="" decoding="async"></button>
               </div>
               <button class="fan-nav" type="button" data-step="1" aria-label="Nhóm sau"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
             </div>
-            <div class="fan-cap"><p class="fan-k"><b class="fan-n">03</b><span class="fan-of">/ 05</span><i></i><span class="fan-g">Nhiếp ảnh</span><i></i><span class="fan-c">7 ảnh</span></p><button class="fan-t" type="button"><span>Chân dung nghệ thuật</span><svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></button><div class="fan-dots"><button class="fan-dot" type="button" data-i="0" aria-label="Sản phẩm thương mại"></button><button class="fan-dot" type="button" data-i="1" aria-label="Sự kiện cộng đồng"></button><button class="fan-dot" type="button" data-i="2" aria-label="Chân dung nghệ thuật" aria-current="true"></button><button class="fan-dot" type="button" data-i="3" aria-label="Linh vật Nai Con"></button><button class="fan-dot" type="button" data-i="4" aria-label="Phong cảnh và đời sống"></button></div></div>
+            <div class="fan-cap"><p class="fan-k"><b class="fan-n">03</b><span class="fan-of">/ 05</span><i></i><span class="fan-g">Nhiếp ảnh</span><i></i><span class="fan-c">17 ảnh</span></p><button class="fan-t" type="button"><span>Lễ hội &amp; Văn hóa</span><svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></button><div class="fan-dots"><button class="fan-dot" type="button" data-i="0" aria-label="Chân dung nghệ thuật"></button><button class="fan-dot" type="button" data-i="1" aria-label="Nội thất &amp; Kiến trúc"></button><button class="fan-dot" type="button" data-i="2" aria-label="Lễ hội &amp; Văn hóa" aria-current="true"></button><button class="fan-dot" type="button" data-i="3" aria-label="Video bất động sản"></button><button class="fan-dot" type="button" data-i="4" aria-label="Làng gốm"></button></div></div>
           </div>
         </div>
         <div class="pf-tabs" role="tablist" aria-label="Nhóm dự án">
-          <button class="pf-tab" type="button" role="tab" id="t-web" aria-controls="g-web" aria-selected="true" tabindex="0"><svg class="ico" aria-hidden="true"><use href="#i-monitor"/></svg><span>Sản phẩm số</span><b>6</b></button>
+          <button class="pf-tab" type="button" role="tab" id="t-photo" aria-controls="g-photo" aria-selected="true" tabindex="0"><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg><span>Nhiếp ảnh</span><b>6</b></button>
+          <button class="pf-tab" type="button" role="tab" id="t-video" aria-controls="g-video" aria-selected="false" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg><span>Video</span><b>8</b></button>
           <button class="pf-tab" type="button" role="tab" id="t-design" aria-controls="g-design" aria-selected="false" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg><span>Thiết kế</span><b>5</b></button>
-          <button class="pf-tab" type="button" role="tab" id="t-video" aria-controls="g-video" aria-selected="false" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg><span>Video</span><b>3</b></button>
-          <button class="pf-tab" type="button" role="tab" id="t-photo" aria-controls="g-photo" aria-selected="false" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg><span>Nhiếp ảnh</span><b>6</b></button>
+          <button class="pf-tab" type="button" role="tab" id="t-web" aria-controls="g-web" aria-selected="false" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-monitor"/></svg><span>Sản phẩm số</span><b>6</b></button>
         </div>
         <p class="pf-hint"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg> Vuốt ngang để xem thêm</p>
-        <div class="pf-group" role="tabpanel" id="g-web" aria-labelledby="t-web">
-          <h3 class="vh">Sản phẩm số và công cụ</h3>
-          <div class="pf-grid pf-grid-3">
-              <article class="pf-card" data-layer="card" id="pf-web-tuyen-dung">
-                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Trang tuyển dụng tương tác"><img src="assets/img/web-tuyen-dung-900.webp" alt="" width="900" height="439" loading="lazy" decoding="async"><span class="pf-count">1 ảnh</span></button>
-                <div class="pf-t">
-                  <h4>Trang tuyển dụng tương tác</h4>
-                  <p>Website tuyển dụng của Unite Group: vị trí, lộ trình phát triển và form ứng tuyển.</p>
-                  <ul class="tools" aria-label="Công cụ"><li data-tip="HTML5"><svg class="ico" aria-hidden="true"><use href="#i-filecode"/></svg><span class="vh">HTML5</span></li><li data-tip="CSS3"><svg class="ico" aria-hidden="true"><use href="#i-hash"/></svg><span class="vh">CSS3</span></li><li data-tip="JavaScript"><svg class="ico" aria-hidden="true"><use href="#i-braces"/></svg><span class="vh">JavaScript</span></li><li data-tip="React"><svg class="ico" aria-hidden="true"><use href="#i-blocks"/></svg><span class="vh">React</span></li><li data-tip="GitHub Pages"><svg class="ico" aria-hidden="true"><use href="#i-git"/></svg><span class="vh">GitHub Pages</span></li></ul>
-                  <div class="pf-links">
-                    <a class="pf-more" href="https://unitemedia2010-oss.github.io/JD_UNITEGROUP/" target="_blank" rel="noopener">Xem website<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                    <a class="pf-more" href="https://github.com/unitemedia2010-oss/JD_UNITEGROUP" target="_blank" rel="noopener">Mã nguồn<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                  </div>
-                </div>
-                <ul class="pf-items" hidden>
-                  <li data-src="assets/img/web-tuyen-dung-1600.webp" data-t="Trang chủ tuyển dụng" data-d="Chuyên viên tư vấn cho thuê căn hộ"></li>
-                </ul>
-              </article>
-              <article class="pf-card" data-layer="card" id="pf-web-staycation">
-                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Website Unite Staycation"><img src="assets/img/web-staycation-900.webp" alt="" width="900" height="439" loading="lazy" decoding="async"><span class="pf-count">1 ảnh</span></button>
-                <div class="pf-t">
-                  <h4>Website Unite Staycation</h4>
-                  <p>Giới thiệu căn hộ Staycation, kèm dashboard quản lý bán hàng và vận hành.</p>
-                  <ul class="tools" aria-label="Công cụ"><li data-tip="Web Platform"><svg class="ico" aria-hidden="true"><use href="#i-monitor"/></svg><span class="vh">Web Platform</span></li><li data-tip="Dashboard"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg><span class="vh">Dashboard</span></li><li data-tip="Business Ops"><svg class="ico" aria-hidden="true"><use href="#i-briefcase"/></svg><span class="vh">Business Ops</span></li></ul>
-                  <div class="pf-links">
-                    <a class="pf-more" href="https://unitestaycation.com.vn" target="_blank" rel="noopener">Xem website<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                  </div>
-                </div>
-                <ul class="pf-items" hidden>
-                  <li data-src="assets/img/web-staycation-1600.webp" data-t="Trang chủ Unite Staycation" data-d="Không gian riêng tư, đặt phòng trực tuyến"></li>
-                </ul>
-              </article>
-              <article class="pf-card" data-layer="card" id="pf-web-vinh-danh">
-                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 2 ảnh Bảng vinh danh chuyển động"><img src="assets/img/web-vinh-danh-1-900.webp" alt="" width="900" height="446" loading="lazy" decoding="async"><span class="pf-count">2 ảnh</span></button>
-                <div class="pf-t">
-                  <h4>Bảng vinh danh chuyển động</h4>
-                  <p>Tôn vinh cá nhân và tập thể xuất sắc bằng hiệu ứng chuyển động.</p>
-                  <ul class="tools" aria-label="Công cụ"><li data-tip="React"><svg class="ico" aria-hidden="true"><use href="#i-blocks"/></svg><span class="vh">React</span></li><li data-tip="CSS Motion"><svg class="ico" aria-hidden="true"><use href="#i-pulse"/></svg><span class="vh">CSS Motion</span></li><li data-tip="Responsive"><svg class="ico" aria-hidden="true"><use href="#i-devices"/></svg><span class="vh">Responsive</span></li></ul>
-                  <div class="pf-links">
-                    <a class="pf-more" href="https://unitemedia2010-oss.github.io/unite-vinh-danh/#/share" target="_blank" rel="noopener">Xem website<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                    <a class="pf-more" href="https://github.com/unitemedia2010-oss/unite-vinh-danh" target="_blank" rel="noopener">Mã nguồn<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                  </div>
-                </div>
-                <ul class="pf-items" hidden>
-                  <li data-src="assets/img/web-vinh-danh-1-1600.webp" data-t="Hạng mục Thống Soái" data-d="Bục vinh danh ba vị trí dẫn đầu"></li>
-                  <li data-src="assets/img/web-vinh-danh-2-1600.webp" data-t="Hạng mục Sư Tử" data-d="Bảng xếp hạng kèm danh sách chi tiết"></li>
-                </ul>
-              </article>
-              <article class="pf-card" data-layer="card" id="pf-web-ganlogo">
-                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Brand Image Studio (GanLoGo)"><img src="assets/img/web-ganlogo-900.webp" alt="" width="900" height="443" loading="lazy" decoding="async"><span class="pf-count">1 ảnh</span></button>
-                <div class="pf-t">
-                  <h4>Brand Image Studio (GanLoGo)</h4>
-                  <p>Gắn logo, khung avatar hàng loạt cho ảnh nhân sự ngay trên trình duyệt.</p>
-                  <ul class="tools" aria-label="Công cụ"><li data-tip="Canvas API"><svg class="ico" aria-hidden="true"><use href="#i-image"/></svg><span class="vh">Canvas API</span></li><li data-tip="Client-side"><svg class="ico" aria-hidden="true"><use href="#i-cpu"/></svg><span class="vh">Client-side</span></li></ul>
-                  <div class="pf-links">
-                    <a class="pf-more" href="https://nitegroup-design.github.io/GanLoGo/" target="_blank" rel="noopener">Dùng thử<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                    <a class="pf-more" href="https://github.com/nitegroup-design/GanLoGo" target="_blank" rel="noopener">Mã nguồn<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                  </div>
-                </div>
-                <ul class="pf-items" hidden>
-                  <li data-src="assets/img/web-ganlogo-1600.webp" data-t="Giao diện GanLoGo" data-d="Chọn ảnh, gắn khung và xuất hàng loạt"></li>
-                </ul>
-              </article>
-              <article class="pf-card" data-layer="card" id="pf-web-ai-studio">
-                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 2 ảnh AI Agency Studio"><img src="assets/img/web-ai-studio-2-900.webp" alt="" width="900" height="429" loading="lazy" decoding="async"><span class="pf-count">2 ảnh</span></button>
-                <div class="pf-t">
-                  <span class="pf-status"><i></i>Đang phát triển</span>
-                  <h4>AI Agency Studio</h4>
-                  <p>Hệ thống nhiều AI Agent: lồng tiếng, dịch video, đồng bộ lời bài hát, dựng web.</p>
-                  <ul class="tools" aria-label="Công cụ"><li data-tip="Python"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg><span class="vh">Python</span></li><li data-tip="Multi-Agent"><svg class="ico" aria-hidden="true"><use href="#i-network"/></svg><span class="vh">Multi-Agent</span></li><li data-tip="LLM API"><svg class="ico" aria-hidden="true"><use href="#i-plug"/></svg><span class="vh">LLM API</span></li><li data-tip="Automation"><svg class="ico" aria-hidden="true"><use href="#i-flow"/></svg><span class="vh">Automation</span></li></ul>
-                  <div class="pf-links">
-                    <a class="pf-more" href="https://nguyenphitruong1807-beep--voice-studio-web.us-east.modal.run/" target="_blank" rel="noopener">Voice Studio<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                    <a class="pf-more" href="https://unitemedia2010-oss.github.io/ai-video-translation-studio/" target="_blank" rel="noopener">Dịch video AI<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                    <a class="pf-more" href="https://nitegroup-design.github.io/koko-linh-birthday/" target="_blank" rel="noopener">Web sinh nhật<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                  </div>
-                </div>
-                <ul class="pf-items" hidden>
-                  <li data-src="assets/img/web-ai-studio-2-1600.webp" data-t="Voice Studio" data-d="Kịch bản mới, vẫn là giọng của bạn"></li>
-                  <li data-src="assets/img/web-ai-studio-1-1600.webp" data-t="Karaoke Studio" data-d="Đồng bộ lời bài hát đến từng âm tiết"></li>
-                </ul>
-              </article>
-              <article class="pf-card" data-layer="card" id="pf-web-portfolio">
-                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Portfolio cá nhân"><img src="assets/img/site-cover.jpg" alt="" width="1440" height="810" loading="lazy" decoding="async"><span class="pf-count">1 ảnh</span></button>
-                <div class="pf-t">
-                  <h4>Portfolio cá nhân</h4>
-                  <p>Chính trang này: phim 3D mở đầu, giao diện vàng, xem tốt trên điện thoại.</p>
-                  <ul class="tools" aria-label="Công cụ"><li data-tip="HTML5"><svg class="ico" aria-hidden="true"><use href="#i-filecode"/></svg><span class="vh">HTML5</span></li><li data-tip="CSS3"><svg class="ico" aria-hidden="true"><use href="#i-hash"/></svg><span class="vh">CSS3</span></li><li data-tip="WebGL2 3D"><svg class="ico" aria-hidden="true"><use href="#i-cube"/></svg><span class="vh">WebGL2 3D</span></li><li data-tip="GitHub Pages"><svg class="ico" aria-hidden="true"><use href="#i-git"/></svg><span class="vh">GitHub Pages</span></li></ul>
-                  <div class="pf-links">
-                    <a class="pf-more" href="https://github.com/phitruong600/portfolio-NPT" target="_blank" rel="noopener">Mã nguồn<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                  </div>
-                </div>
-                <ul class="pf-items" hidden>
-                  <li data-src="assets/img/site-cover.jpg" data-t="Portfolio Nguyễn Phi Trường" data-d="Trang đầu với ảnh chân dung và phần giới thiệu"></li>
-                </ul>
-              </article>
-          </div>
-        </div>
-        <div class="pf-group" role="tabpanel" id="g-design" aria-labelledby="t-design" hidden>
-          <h3 class="vh">Thiết kế đồ họa và truyền thông</h3>
-          <div class="pf-grid">
-              <article class="pf-card pf-wide" data-layer="card" id="pf-san-khau-moi">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 5 ảnh Sân Khấu Mới — Nhà hát Trần Hữu Trang"><img src="assets/img/skm-co-trang-900.webp" alt="" width="900" height="506" loading="lazy" decoding="async"><img src="assets/img/skm-mot-moi-tinh-900.webp" alt="" width="900" height="506" loading="lazy" decoding="async"><span class="pf-count">5 ảnh</span></button>
-                <div class="pf-t">
-                  <span class="pf-when"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg>10/2026</span>
-                  <h4>Sân Khấu Mới&nbsp;— Nhà hát Trần Hữu Trang</h4>
-                  <p>Poster vở diễn, lịch diễn tháng 10, vé mời, nội quy sân khấu và poster tri ân 20/10.</p>
-                  <ul class="tools" aria-label="Công cụ"><li data-tip="Photoshop"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg><span class="vh">Photoshop</span></li><li data-tip="Canva"><svg class="ico" aria-hidden="true"><use href="#i-palette"/></svg><span class="vh">Canva</span></li><li data-tip="Typography"><svg class="ico" aria-hidden="true"><use href="#i-type"/></svg><span class="vh">Typography</span></li><li data-tip="AI workflow"><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg><span class="vh">AI workflow</span></li></ul>
-                  <div class="pf-links">
-                    <span class="pf-nums"><span>Facebook</span><a href="https://www.facebook.com/share/p/1Dn11mkxVY/" target="_blank" rel="noopener" aria-label="Bài đăng Facebook 1">01</a><a href="https://www.facebook.com/share/p/14tHGvuoFyy/" target="_blank" rel="noopener" aria-label="Bài đăng Facebook 2">02</a><a href="https://www.facebook.com/share/p/1G8LihP3o5/" target="_blank" rel="noopener" aria-label="Bài đăng Facebook 3">03</a><a href="https://www.facebook.com/share/p/1E2W87eEBp/" target="_blank" rel="noopener" aria-label="Bài đăng Facebook 4">04</a></span>
-                  </div>
-                </div>
-                <ul class="pf-items" hidden>
-                  <li data-src="assets/img/skm-co-trang-1600.webp" data-t="Poster vở diễn cổ trang" data-d="Key visual chính, tông vàng nâu cổ điển"></li>
-                  <li data-src="assets/img/skm-mot-moi-tinh-1600.webp" data-t="Poster vở Một Mối Tình" data-d="Ánh hoàng hôn hoài cổ"></li>
-                  <li data-src="assets/img/skm-lich-dien-1600.webp" data-t="Lịch diễn tháng 10" data-d="Tổng hợp các suất diễn tại Nhà hát Trần Hữu Trang"></li>
-                  <li data-src="assets/img/skm-ve-moi-1600.webp" data-t="Vé mời" data-d="Thiết kế vé theo key visual vở diễn"></li>
-                  <li data-src="assets/img/skm-noi-quy-1600.webp" data-t="Nội quy sân khấu" data-d="Ấn phẩm hướng dẫn khán giả"></li>
-                </ul>
-              </article>
-              <article class="pf-card" data-layer="card" id="pf-leadership">
-                <button class="pf-cover pf-vid" type="button" data-pf aria-label="Xem 2 video Leadership — Sói Đầu Đàn"><img src="assets/img/soi-dau-dan-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 62%"><img src="assets/img/marketing-thuc-chien-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 40%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">2 video</span></button>
-                <div class="pf-t">
-                  <span class="pf-when"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg>10/2026</span>
-                  <h4>Leadership&nbsp;— Sói Đầu Đàn</h4>
-                  <p>Poster diễn giả tông tối – cam và video loop 9:16 cho khóa đào tạo nội bộ.</p>
-                  <ul class="tools" aria-label="Công cụ"><li data-tip="Photoshop"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg><span class="vh">Photoshop</span></li><li data-tip="Typography"><svg class="ico" aria-hidden="true"><use href="#i-type"/></svg><span class="vh">Typography</span></li><li data-tip="Video Loop"><svg class="ico" aria-hidden="true"><use href="#i-loop"/></svg><span class="vh">Video Loop</span></li></ul>
-                </div>
-                <ul class="pf-items" hidden>
-                  <li data-type="video" data-src="assets/video/soi-dau-dan.mp4" data-poster="assets/img/soi-dau-dan-poster.webp" data-t="Sói Đầu Đàn" data-d="Video loop 9:16 cho khóa đào tạo kỹ năng lãnh đạo"></li>
-                  <li data-type="video" data-src="assets/video/marketing-thuc-chien.mp4" data-poster="assets/img/marketing-thuc-chien-poster.webp" data-t="Marketing Thực Chiến" data-d="Video loop 9:16 giới thiệu diễn giả"></li>
-                </ul>
-              </article>
-              <article class="pf-card" data-layer="card" id="pf-nai-con">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 6 ảnh Linh vật Nai Con — Unite Group"><img src="assets/img/nai-con-chan-dung-900.webp" alt="" width="900" height="851" loading="lazy" decoding="async" style="object-position:50% 40%"><span class="pf-count">6 ảnh</span></button>
-                <div class="pf-t">
-                  <h4>Linh vật Nai Con&nbsp;— Unite Group</h4>
-                  <p>Mascot cho fanpage: bộ nhận diện, bảng biểu cảm và bài đăng tương tác.</p>
-                  <ul class="tools" aria-label="Công cụ"><li data-tip="Character Design"><svg class="ico" aria-hidden="true"><use href="#i-smile"/></svg><span class="vh">Character Design</span></li><li data-tip="AI Image Tools"><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg><span class="vh">AI Image Tools</span></li></ul>
-                  <div class="pf-links">
-                    <a class="pf-more" href="https://www.facebook.com/share/1G6RXWeVKw/" target="_blank" rel="noopener">Bài đăng Fanpage<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                  </div>
-                </div>
-                <ul class="pf-items" hidden>
-                  <li data-src="assets/img/nai-con-chan-dung-1600.webp" data-t="Chân dung Nai Con" data-d="Mũ lưỡi trai và cặp kính tròn đặc trưng"></li>
-                  <li data-src="assets/img/nai-con-bo-nhan-dien-1600.webp" data-t="Bộ nhận diện mascot" data-d="Tham chiếu trang phục, phụ kiện và bảng màu"></li>
-                  <li data-src="assets/img/nai-con-bieu-cam-1600.webp" data-t="Bảng biểu cảm" data-d="Chín biểu cảm cho bài đăng và sticker"></li>
-                  <li data-src="assets/img/nai-con-casting-1600.webp" data-t="Casting Nai Con" data-d="Bài đăng tương tác: bạn thuộc hệ nhân viên nào?"></li>
-                  <li data-src="assets/img/nai-con-huong-noi-1600.webp" data-t="Hệ hướng nội" data-d="Series tính cách nhân viên văn phòng"></li>
-                  <li data-src="assets/img/nai-con-du-an-ma-1600.webp" data-t="Top 1 dự án ma" data-d="Bài đăng hài hước về đời sống công sở"></li>
-                </ul>
-              </article>
-              <article class="pf-card pf-span-3 pf-posters" data-layer="card" id="pf-fanpage">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 13 ảnh Ấn phẩm Fanpage Unite Group"><img src="assets/img/fp-best-seller-1-900.webp" alt="" width="720" height="900" loading="lazy" decoding="async"><img src="assets/img/fp-thang-doi-900.webp" alt="" width="900" height="900" loading="lazy" decoding="async"><img src="assets/img/fp-lam-it-900.webp" alt="" width="720" height="900" loading="lazy" decoding="async"><img src="assets/img/fp-quyen-loi-900.webp" alt="" width="720" height="900" loading="lazy" decoding="async"><img src="assets/img/fp-luong-ve-900.webp" alt="" width="720" height="900" loading="lazy" decoding="async"><span class="pf-count">13 ảnh</span></button>
-                <div class="pf-t">
-                  <h4>Ấn phẩm Fanpage Unite Group</h4>
-                  <p>Bài đăng hằng tuần: vinh danh, tuyển dụng, thông điệp nội bộ và các series tương tác.</p>
-                  <ul class="tools" aria-label="Công cụ"><li data-tip="Canva"><svg class="ico" aria-hidden="true"><use href="#i-palette"/></svg><span class="vh">Canva</span></li><li data-tip="Photoshop"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg><span class="vh">Photoshop</span></li><li data-tip="Social Layouts"><svg class="ico" aria-hidden="true"><use href="#i-layout"/></svg><span class="vh">Social Layouts</span></li></ul>
-                  <div class="pf-links">
-                    <a class="pf-more" href="https://www.facebook.com/unitegroup.com.vn" target="_blank" rel="noopener">Xem Fanpage<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                  </div>
-                </div>
-                <ul class="pf-items" hidden>
-                  <li data-src="assets/img/fp-best-seller-1-1600.webp" data-t="Vinh danh Best Seller" data-d="Poster vinh danh tháng 10/2026"></li>
-                  <li data-src="assets/img/fp-best-seller-2-1600.webp" data-t="Vinh danh Best Seller" data-d="Bộ poster vinh danh cá nhân"></li>
-                  <li data-src="assets/img/fp-best-team-1600.webp" data-t="Vinh danh Best Team" data-d="Poster vinh danh tập thể"></li>
-                  <li data-src="assets/img/fp-ket-qua-1600.webp" data-t="Kết quả chung cuộc" data-d="Công bố giải thưởng thi đua"></li>
-                  <li data-src="assets/img/fp-tan-quan-ly-1600.webp" data-t="Chúc mừng tân quản lý" data-d="Poster bổ nhiệm chi nhánh"></li>
-                  <li data-src="assets/img/fp-thang-doi-1600.webp" data-t="Thắng đời 1–0" data-d="Series trước và sau khi gia nhập"></li>
-                  <li data-src="assets/img/fp-truoc-sau-1600.webp" data-t="Trước và sau khi gia nhập" data-d="Phiên bản nền cỏ sân trường"></li>
-                  <li data-src="assets/img/fp-hai-kieu-nguoi-1600.webp" data-t="Có 2 kiểu người" data-d="Bài đăng so sánh vui nhộn"></li>
-                  <li data-src="assets/img/fp-lam-it-1600.webp" data-t="Làm ít việc hơn, hiệu quả hơn" data-d="Thông điệp đầu tuần"></li>
-                  <li data-src="assets/img/fp-quyen-loi-1600.webp" data-t="Gia nhập Unite Group" data-d="Poster tuyển dụng chuyên viên tư vấn"></li>
-                  <li data-src="assets/img/fp-sinh-vien-1600.webp" data-t="Alo các bạn sinh viên" data-d="Bài đăng tương tác theo địa điểm"></li>
-                  <li data-src="assets/img/fp-moi-ra-truong-1600.webp" data-t="Sinh viên mới ra trường" data-d="Bài đăng định hướng nghề nghiệp"></li>
-                  <li data-src="assets/img/fp-luong-ve-1600.webp" data-t="Lương về, lương về" data-d="Nai Con trong bài đăng ngày nhận lương"></li>
-                </ul>
-              </article>
-              <article class="pf-card pf-logo pf-posters" data-layer="card" id="pf-logo">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 2 ảnh Biểu trưng cá nhân PT"><img src="assets/img/logo-pt-900.webp" alt="" width="900" height="900" loading="lazy" decoding="async"><img src="assets/img/logo-pt-mockup-900.webp" alt="" width="900" height="672" loading="lazy" decoding="async"><span class="pf-count">2 ảnh</span></button>
-                <div class="pf-t">
-                  <h4>Biểu trưng cá nhân PT</h4>
-                  <p>Monogram P và T như dải ruy băng vàng kim, dùng cho web, CV và mạng xã hội.</p>
-                  <ul class="tools" aria-label="Công cụ"><li data-tip="Illustrator"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg><span class="vh">Illustrator</span></li><li data-tip="Photoshop"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg><span class="vh">Photoshop</span></li><li data-tip="Brand Identity"><svg class="ico" aria-hidden="true"><use href="#i-gem"/></svg><span class="vh">Brand Identity</span></li></ul>
-                </div>
-                <ul class="pf-items" hidden>
-                  <li data-src="assets/img/logo-pt-1600.webp" data-t="Monogram PT" data-d="Bản vàng kim trên nền đen"></li>
-                  <li data-src="assets/img/logo-pt-mockup-1600.webp" data-t="Mockup biểu trưng" data-d="Logo dập nổi trên nền xám"></li>
-                </ul>
-              </article>
-          </div>
-        </div>
-        <div class="pf-group" role="tabpanel" id="g-video" aria-labelledby="t-video" hidden>
-          <h3 class="vh">Sản xuất video và nội dung</h3>
-          <div class="pf-grid pf-tall">
-              <article class="pf-card" data-layer="card" id="pf-fight100">
-                <a class="pf-cover pf-vid" href="https://www.tiktok.com/@linh.trng.i.koko/video/7703094446128205077" target="_blank" rel="noopener" aria-label="Xem vlog Fight100 trên TikTok"><img src="assets/img/fight100-900.webp" alt="" width="507" height="900" loading="lazy" decoding="async" style="object-position:50% 50%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">TikTok</span></a>
-                <div class="pf-t">
-                  <h4>Vlog trải nghiệm Boxing&nbsp;— Fight100</h4>
-                  <p>Ý tưởng, kịch bản, quay và dựng vlog buổi tập boxing tại CLB Fight100.</p>
-                  <ul class="tools" aria-label="Công cụ"><li data-tip="Pocket 4P"><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg><span class="vh">Pocket 4P</span></li><li data-tip="CapCut"><svg class="ico" aria-hidden="true"><use href="#i-scissors"/></svg><span class="vh">CapCut</span></li><li data-tip="Voiceover"><svg class="ico" aria-hidden="true"><use href="#i-mic"/></svg><span class="vh">Voiceover</span></li><li data-tip="Sound Design"><svg class="ico" aria-hidden="true"><use href="#i-wave"/></svg><span class="vh">Sound Design</span></li></ul>
-                  <div class="pf-links">
-                    <a class="pf-more" href="https://www.tiktok.com/@linh.trng.i.koko/video/7703094446128205077" target="_blank" rel="noopener">Xem trên TikTok<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                  </div>
-                </div>
-              </article>
-              <article class="pf-card" data-layer="card" id="pf-tiktok-ceo">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 2 ảnh Kênh TikTok CEO Unite Group"><img src="assets/img/tiktok-ceo-video-900.webp" alt="" width="406" height="539" loading="lazy" decoding="async" style="object-position:50% 40%"><img src="assets/img/tiktok-ceo-kenh-900.webp" alt="" width="674" height="900" loading="lazy" decoding="async" style="object-position:50% 0"><span class="pf-count">2 ảnh</span></button>
-                <div class="pf-t">
-                  <span class="pf-when"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg>Từ 12/2025</span>
-                  <h4>Kênh TikTok CEO Unite Group</h4>
-                  <p>Nội dung, quay dựng và vận hành kênh cho CEO; nhiều clip lan tỏa.</p>
-                  <ul class="tools" aria-label="Công cụ"><li data-tip="Short-form Video"><svg class="ico" aria-hidden="true"><use href="#i-smartphone"/></svg><span class="vh">Short-form Video</span></li><li data-tip="Hook Scripting"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><span class="vh">Hook Scripting</span></li><li data-tip="TikTok Trends"><svg class="ico" aria-hidden="true"><use href="#i-trend"/></svg><span class="vh">TikTok Trends</span></li></ul>
-                  <div class="pf-links">
-                    <a class="pf-more" href="https://www.tiktok.com/@linh.trng.i.koko" target="_blank" rel="noopener">Xem kênh<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-                  </div>
-                </div>
-                <ul class="pf-items" hidden>
-                  <li data-src="assets/img/tiktok-ceo-kenh-1600.webp" data-t="Trang kênh TikTok" data-d="Chuỗi video trải nghiệm và thử thách"></li>
-                  <li data-src="assets/img/tiktok-ceo-video-1600.webp" data-t="Video ghim 13,1K lượt xem" data-d="Trải nghiệm lái máy bay mô phỏng"></li>
-                </ul>
-              </article>
-              <article class="pf-card pf-wide" data-layer="card" id="pf-ai-motion">
-                <button class="pf-cover pf-vid" type="button" data-pf aria-label="Xem 3 video AI Motion — TT Genesis"><img src="assets/img/tt-genesis-du-an-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 74%"><img src="assets/img/tt-genesis-ban-do-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 74%"><img src="assets/img/tt-genesis-hieu-ung-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 70%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">3 video</span></button>
-                <div class="pf-t">
-                  <h4>AI Motion&nbsp;— TT Genesis</h4>
-                  <p>Video dọc giới thiệu dự án bất động sản: bản đồ phát sáng, số liệu chuyển động, hiệu ứng điện ảnh.</p>
-                  <ul class="tools" aria-label="Công cụ"><li data-tip="AI Video Tools"><svg class="ico" aria-hidden="true"><use href="#i-filmspark"/></svg><span class="vh">AI Video Tools</span></li><li data-tip="CapCut"><svg class="ico" aria-hidden="true"><use href="#i-scissors"/></svg><span class="vh">CapCut</span></li><li data-tip="Motion Loops"><svg class="ico" aria-hidden="true"><use href="#i-loop"/></svg><span class="vh">Motion Loops</span></li></ul>
-                </div>
-                <ul class="pf-items" hidden>
-                  <li data-type="video" data-src="assets/video/tt-genesis-du-an.mp4" data-poster="assets/img/tt-genesis-du-an-poster.webp" data-t="Góc nhìn dự án" data-d="Vị trí, liên doanh chủ đầu tư và tiện ích trong 72 giây"></li>
-                  <li data-type="video" data-src="assets/video/tt-genesis-ban-do.mp4" data-poster="assets/img/tt-genesis-ban-do-poster.webp" data-t="Bản đồ quy hoạch" data-d="Motion bản đồ phát sáng định vị dự án"></li>
-                  <li data-type="video" data-src="assets/video/tt-genesis-hieu-ung.mp4" data-poster="assets/img/tt-genesis-hieu-ung-poster.webp" data-t="Hiệu ứng số liệu" data-d="Số liệu và biểu đồ giá tông cam điện ảnh"></li>
-                </ul>
-              </article>
-          </div>
-        </div>
-        <div class="pf-group" role="tabpanel" id="g-photo" aria-labelledby="t-photo" hidden>
+        <div class="pf-group" role="tabpanel" id="g-photo" aria-labelledby="t-photo">
           <h3 class="vh">Nhiếp ảnh và hậu kỳ</h3>
           <div class="pf-grid pf-photos">
-              <article class="pf-card pf-wide" data-layer="card" id="pf-chan-dung">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 7 ảnh Chân dung nghệ thuật"><img src="assets/img/cd-van-phong-900.webp" alt="" width="600" height="900" loading="lazy" decoding="async"><img src="assets/img/bida-900.webp" alt="" width="900" height="1351" loading="lazy" decoding="async"><img src="assets/img/cd-xe-moi-900.webp" alt="" width="600" height="900" loading="lazy" decoding="async"><span class="pf-count">7 ảnh</span></button>
-                <div class="pf-t">
-                  <h4>Chân dung nghệ thuật</h4>
-                  <p>Ánh sáng tự nhiên lẫn flash; color grading và retouch da tự nhiên.</p>
-                </div>
-                <ul class="pf-items" hidden>
-                  <li data-src="assets/img/cd-cua-kinh-1600.webp" data-t="Nụ cười sau cửa kính" data-d="Chân dung nơi công sở, ánh sáng tự nhiên"></li>
-                  <li data-src="assets/img/cd-van-phong-1600.webp" data-t="Phong thái nơi làm việc" data-d="Chân dung doanh nhân bên bàn làm việc"></li>
-                  <li data-src="assets/img/cd-xe-moi-1600.webp" data-t="Khoảnh khắc nhận xe mới" data-d="Chân dung sự kiện bàn giao xe"></li>
-                  <li data-src="assets/img/cd-dien-gia-1600.webp" data-t="Diễn giả trên sân khấu" data-d="Bắt khoảnh khắc trong ánh đèn hội trường"></li>
-                  <li data-src="assets/img/bida-1800.webp" data-t="Nàng thơ bên bàn bida" data-d="Trong trẻo và cá tính"></li>
-                  <li data-src="assets/img/doc-sach-1800.webp" data-t="Góc đọc sách" data-d="Ánh sáng dịu, khoảnh khắc tĩnh"></li>
-                  <li data-src="assets/img/ben-song-1800.webp" data-t="Bên sông về đêm" data-d="Ánh đèn thành phố làm nền cho chân dung"></li>
-                </ul>
-              </article>
               <article class="pf-card pf-wide" data-layer="card" id="pf-su-kien-cong-dong">
                 <button class="pf-cover" type="button" data-pf aria-label="Xem 17 ảnh Sự kiện cộng đồng"><img src="assets/img/cong-dong-long-900.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><img src="assets/img/uyen-uong-900.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><img src="assets/img/cong-dong-la-co-900.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><span class="pf-count">17 ảnh</span></button>
                 <div class="pf-t">
@@ -447,20 +194,6 @@
                   <li data-src="assets/img/quoc-khanh-1800.webp" data-t="Phố cờ ngày Quốc khánh" data-d="Sắc đỏ phủ kín con phố dịp 2/9"></li>
                 </ul>
               </article>
-              <article class="pf-card pf-wide" data-layer="card" id="pf-su-kien-doanh-nghiep">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 5 ảnh Sự kiện doanh nghiệp"><img src="assets/img/dn-ky-ket-900.webp" alt="" width="900" height="675" loading="lazy" decoding="async"><img src="assets/img/dn-khoanh-khac-900.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><img src="assets/img/dn-gian-hang-900.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><span class="pf-count">5 ảnh</span></button>
-                <div class="pf-t">
-                  <h4>Sự kiện doanh nghiệp</h4>
-                  <p>Ngày hội tuyển dụng, lễ ký kết hợp tác và hoạt động nội bộ.</p>
-                </div>
-                <ul class="pf-items" hidden>
-                  <li data-src="assets/img/dn-ky-ket-1600.webp" data-t="Lễ ký kết hợp tác" data-d="Tại Trường Đại học Văn Lang"></li>
-                  <li data-src="assets/img/dn-ngay-hoi-1600.webp" data-t="Ngày hội việc làm" data-d="Sinh viên trao đổi cùng nhà tuyển dụng"></li>
-                  <li data-src="assets/img/dn-gian-hang-1600.webp" data-t="Gian hàng tuyển dụng" data-d="Đông kín sinh viên đến tìm hiểu"></li>
-                  <li data-src="assets/img/dn-khoanh-khac-1600.webp" data-t="Khoảnh khắc tại gian hàng" data-d="Nụ cười của các bạn tham gia"></li>
-                  <li data-src="assets/img/dn-sinh-vien-1600.webp" data-t="Sinh viên cùng Unite Group" data-d="Ảnh lưu niệm cuối ngày hội"></li>
-                </ul>
-              </article>
               <article class="pf-card pf-wide" data-layer="card" id="pf-noi-that">
                 <button class="pf-cover" type="button" data-pf aria-label="Xem 5 ảnh Nội thất &amp; Kiến trúc"><img src="assets/img/nt-phong-an-900.webp" alt="" width="900" height="675" loading="lazy" decoding="async"><img src="assets/img/nt-ho-boi-900.webp" alt="" width="675" height="900" loading="lazy" decoding="async"><img src="assets/img/hanh-lang-900.webp" alt="" width="900" height="921" loading="lazy" decoding="async"><span class="pf-count">5 ảnh</span></button>
                 <div class="pf-t">
@@ -473,6 +206,36 @@
                   <li data-src="assets/img/nt-tren-cao-1600.webp" data-t="Góc nhìn từ trên cao" data-d="Đường nét kiến trúc và mảng xanh"></li>
                   <li data-src="assets/img/hanh-lang-1800.webp" data-t="Hành lang tĩnh lặng" data-d="Đối xứng kiến trúc sâu hút"></li>
                   <li data-src="assets/img/phong-nang-1800.webp" data-t="Phòng ngủ đón nắng" data-d="Nắng sớm xuyên rèm, chăn gối gọn gàng"></li>
+                </ul>
+              </article>
+              <article class="pf-card pf-wide" data-layer="card" id="pf-chan-dung">
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 7 ảnh Chân dung nghệ thuật"><img src="assets/img/cd-van-phong-900.webp" alt="" width="600" height="900" loading="lazy" decoding="async"><img src="assets/img/bida-900.webp" alt="" width="900" height="1351" loading="lazy" decoding="async"><img src="assets/img/cd-xe-moi-900.webp" alt="" width="600" height="900" loading="lazy" decoding="async"><span class="pf-count">7 ảnh</span></button>
+                <div class="pf-t">
+                  <h4>Chân dung nghệ thuật</h4>
+                  <p>Ánh sáng tự nhiên lẫn flash; color grading và retouch da tự nhiên.</p>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-src="assets/img/cd-cua-kinh-1600.webp" data-t="Nụ cười sau cửa kính" data-d="Chân dung nơi công sở, ánh sáng tự nhiên"></li>
+                  <li data-src="assets/img/cd-van-phong-1600.webp" data-t="Phong thái nơi làm việc" data-d="Chân dung doanh nhân bên bàn làm việc"></li>
+                  <li data-src="assets/img/cd-xe-moi-1600.webp" data-t="Khoảnh khắc nhận xe mới" data-d="Chân dung sự kiện bàn giao xe"></li>
+                  <li data-src="assets/img/cd-dien-gia-1600.webp" data-t="Diễn giả trên sân khấu" data-d="Bắt khoảnh khắc trong ánh đèn hội trường"></li>
+                  <li data-src="assets/img/bida-1800.webp" data-t="Nàng thơ bên bàn bida" data-d="Trong trẻo và cá tính"></li>
+                  <li data-src="assets/img/doc-sach-1800.webp" data-t="Góc đọc sách" data-d="Ánh sáng dịu, khoảnh khắc tĩnh"></li>
+                  <li data-src="assets/img/ben-song-1800.webp" data-t="Bên sông về đêm" data-d="Ánh đèn thành phố làm nền cho chân dung"></li>
+                </ul>
+              </article>
+              <article class="pf-card pf-wide" data-layer="card" id="pf-su-kien-doanh-nghiep">
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 5 ảnh Sự kiện doanh nghiệp"><img src="assets/img/dn-ky-ket-900.webp" alt="" width="900" height="675" loading="lazy" decoding="async"><img src="assets/img/dn-khoanh-khac-900.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><img src="assets/img/dn-gian-hang-900.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><span class="pf-count">5 ảnh</span></button>
+                <div class="pf-t">
+                  <h4>Sự kiện doanh nghiệp</h4>
+                  <p>Ngày hội tuyển dụng, lễ ký kết hợp tác và hoạt động nội bộ.</p>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-src="assets/img/dn-ky-ket-1600.webp" data-t="Lễ ký kết hợp tác" data-d="Tại Trường Đại học Văn Lang"></li>
+                  <li data-src="assets/img/dn-ngay-hoi-1600.webp" data-t="Ngày hội việc làm" data-d="Sinh viên trao đổi cùng nhà tuyển dụng"></li>
+                  <li data-src="assets/img/dn-gian-hang-1600.webp" data-t="Gian hàng tuyển dụng" data-d="Đông kín sinh viên đến tìm hiểu"></li>
+                  <li data-src="assets/img/dn-khoanh-khac-1600.webp" data-t="Khoảnh khắc tại gian hàng" data-d="Nụ cười của các bạn tham gia"></li>
+                  <li data-src="assets/img/dn-sinh-vien-1600.webp" data-t="Sinh viên cùng Unite Group" data-d="Ảnh lưu niệm cuối ngày hội"></li>
                 </ul>
               </article>
               <article class="pf-card pf-wide" data-layer="card" id="pf-san-pham">
@@ -510,6 +273,304 @@
               </article>
           </div>
         </div>
+        <div class="pf-group" role="tabpanel" id="g-video" aria-labelledby="t-video" hidden>
+          <h3 class="vh">Sản xuất video và nội dung</h3>
+          <div class="pf-grid pf-reels">
+              <article class="pf-card" data-layer="card" id="pf-gom">
+                <button class="pf-cover pf-vid" type="button" data-pf aria-label="Xem 1 video Làng gốm — Daily Cinema"><img src="assets/img/gom-1-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 50%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">1 video</span></button>
+                <div class="pf-t">
+                  <span class="pf-tag">Văn hóa</span>
+                  <h4>Làng gốm&nbsp;— Daily Cinema</h4>
+                  <p>Vlog văn hóa: một ngày ở làng gốm, từ bàn xoay đến nét vẽ tay.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="Pocket 4P"><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg><span class="vh">Pocket 4P</span></li><li data-tip="CapCut"><img class="tl" src="assets/img/tools/capcut.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">CapCut</span></li><li data-tip="Sound Design"><svg class="ico" aria-hidden="true"><use href="#i-wave"/></svg><span class="vh">Sound Design</span></li></ul>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-type="video" data-src="assets/video/gom-1.mp4" data-poster="assets/img/gom-1-poster.webp" data-t="Làng gốm · Daily Cinema" data-d="Một ngày ở xưởng gốm: tráng men, vẽ tay, phơi bình"></li>
+                </ul>
+              </article>
+              <article class="pf-card" data-layer="card" id="pf-gom-2">
+                <button class="pf-cover pf-vid" type="button" data-pf aria-label="Xem 1 video Nét vẽ trên gốm"><img src="assets/img/gom-2-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 45%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">1 video</span></button>
+                <div class="pf-t">
+                  <span class="pf-tag">Văn hóa</span>
+                  <h4>Nét vẽ trên gốm</h4>
+                  <p>Cận cảnh hoa văn khắc và vẽ tay trên bình gốm.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="Pocket 4P"><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg><span class="vh">Pocket 4P</span></li><li data-tip="CapCut"><img class="tl" src="assets/img/tools/capcut.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">CapCut</span></li><li data-tip="Color Grading"><img class="tl" src="assets/img/tools/grading.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Color Grading</span></li></ul>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-type="video" data-src="assets/video/gom-2.mp4" data-poster="assets/img/gom-2-poster.webp" data-t="Nét vẽ trên gốm" data-d="Hoa văn khắc tay trên bình và chén"></li>
+                </ul>
+              </article>
+              <article class="pf-card" data-layer="card" id="pf-bds-review">
+                <button class="pf-cover pf-vid" type="button" data-pf aria-label="Xem 1 video Review căn hộ The River Thủ Thiêm"><img src="assets/img/bds-review-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 50%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">1 video</span></button>
+                <div class="pf-t">
+                  <span class="pf-tag">Review BĐS</span>
+                  <h4>Review căn hộ The River Thủ Thiêm</h4>
+                  <p>Vlog đi xem căn 3PN view sông: nội thất, tầm nhìn và tiện ích.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="Pocket 4P"><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg><span class="vh">Pocket 4P</span></li><li data-tip="CapCut"><img class="tl" src="assets/img/tools/capcut.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">CapCut</span></li><li data-tip="Voiceover"><svg class="ico" aria-hidden="true"><use href="#i-mic"/></svg><span class="vh">Voiceover</span></li></ul>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-type="video" data-src="assets/video/bds-review.mp4" data-poster="assets/img/bds-review-poster.webp" data-t="Review căn hộ The River Thủ Thiêm" data-d="Vlog một ngày đi xem căn 3PN view sông cùng KokoLinh"></li>
+                </ul>
+              </article>
+              <article class="pf-card" data-layer="card" id="pf-bds-du-an">
+                <button class="pf-cover pf-vid" type="button" data-pf aria-label="Xem 1 video TT Genesis — Góc nhìn dự án"><img src="assets/img/tt-genesis-du-an-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 40%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">1 video</span></button>
+                <div class="pf-t">
+                  <span class="pf-tag">Video BĐS</span>
+                  <h4>TT Genesis&nbsp;— Góc nhìn dự án</h4>
+                  <p>Video dọc giới thiệu dự án bất động sản: vị trí, chủ đầu tư, tiện ích.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="AI Video Tools"><img class="tl" src="assets/img/tools/ai-motion.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">AI Video Tools</span></li><li data-tip="CapCut"><img class="tl" src="assets/img/tools/capcut.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">CapCut</span></li><li data-tip="Voiceover"><svg class="ico" aria-hidden="true"><use href="#i-mic"/></svg><span class="vh">Voiceover</span></li></ul>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-type="video" data-src="assets/video/tt-genesis-du-an.mp4" data-poster="assets/img/tt-genesis-du-an-poster.webp" data-t="Góc nhìn dự án" data-d="Vị trí, liên doanh chủ đầu tư và tiện ích trong 72 giây"></li>
+                </ul>
+              </article>
+              <article class="pf-card" data-layer="card" id="pf-bds-ban-do">
+                <button class="pf-cover pf-vid" type="button" data-pf aria-label="Xem 1 video TT Genesis — Bản đồ quy hoạch"><img src="assets/img/tt-genesis-ban-do-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 40%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">1 video</span></button>
+                <div class="pf-t">
+                  <span class="pf-tag">Video BĐS</span>
+                  <h4>TT Genesis&nbsp;— Bản đồ quy hoạch</h4>
+                  <p>Motion bản đồ phát sáng, định vị dự án và kết nối vùng.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="AI Motion"><img class="tl" src="assets/img/tools/ai-motion.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">AI Motion</span></li><li data-tip="CapCut"><img class="tl" src="assets/img/tools/capcut.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">CapCut</span></li><li data-tip="Motion Loops"><svg class="ico" aria-hidden="true"><use href="#i-loop"/></svg><span class="vh">Motion Loops</span></li></ul>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-type="video" data-src="assets/video/tt-genesis-ban-do.mp4" data-poster="assets/img/tt-genesis-ban-do-poster.webp" data-t="Bản đồ quy hoạch" data-d="Motion bản đồ phát sáng định vị dự án"></li>
+                </ul>
+              </article>
+              <article class="pf-card" data-layer="card" id="pf-bds-hieu-ung">
+                <button class="pf-cover pf-vid" type="button" data-pf aria-label="Xem 1 video TT Genesis — Hiệu ứng số liệu"><img src="assets/img/tt-genesis-hieu-ung-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 40%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">1 video</span></button>
+                <div class="pf-t">
+                  <span class="pf-tag">Video BĐS</span>
+                  <h4>TT Genesis&nbsp;— Hiệu ứng số liệu</h4>
+                  <p>Số liệu, biểu đồ giá chuyển động với tông cam điện ảnh.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="AI Motion"><img class="tl" src="assets/img/tools/ai-motion.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">AI Motion</span></li><li data-tip="CapCut"><img class="tl" src="assets/img/tools/capcut.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">CapCut</span></li><li data-tip="Sound Design"><svg class="ico" aria-hidden="true"><use href="#i-wave"/></svg><span class="vh">Sound Design</span></li></ul>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-type="video" data-src="assets/video/tt-genesis-hieu-ung.mp4" data-poster="assets/img/tt-genesis-hieu-ung-poster.webp" data-t="Hiệu ứng số liệu" data-d="Số liệu và biểu đồ giá tông cam điện ảnh"></li>
+                </ul>
+              </article>
+              <article class="pf-card" data-layer="card" id="pf-fight100">
+                <a class="pf-cover pf-vid" href="https://www.tiktok.com/@linh.trng.i.koko/video/7703094446128205077" target="_blank" rel="noopener" aria-label="Xem vlog Fight100 trên TikTok"><img src="assets/img/fight100-900.webp" alt="" width="507" height="900" loading="lazy" decoding="async" style="object-position:50% 50%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">TikTok</span></a>
+                <div class="pf-t">
+                  <span class="pf-tag">Vlog</span>
+                  <h4>Vlog Boxing&nbsp;— Fight100</h4>
+                  <p>Ý tưởng, kịch bản, quay và dựng vlog buổi tập boxing tại CLB Fight100.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="Pocket 4P"><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg><span class="vh">Pocket 4P</span></li><li data-tip="CapCut"><img class="tl" src="assets/img/tools/capcut.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">CapCut</span></li><li data-tip="Voiceover"><svg class="ico" aria-hidden="true"><use href="#i-mic"/></svg><span class="vh">Voiceover</span></li><li data-tip="Sound Design"><svg class="ico" aria-hidden="true"><use href="#i-wave"/></svg><span class="vh">Sound Design</span></li></ul>
+                  <div class="pf-links">
+                    <a class="pf-more" href="https://www.tiktok.com/@linh.trng.i.koko/video/7703094446128205077" target="_blank" rel="noopener">Xem trên TikTok<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+              </article>
+              <article class="pf-card" data-layer="card" id="pf-tiktok-ceo">
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 2 ảnh Kênh TikTok CEO Unite Group"><img src="assets/img/tiktok-ceo-kenh-900.webp" alt="" width="674" height="900" loading="lazy" decoding="async" style="object-position:50% 0"><span class="pf-count">2 ảnh</span></button>
+                <div class="pf-t">
+                  <span class="pf-when"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg>Từ 12/2025</span>
+                  <span class="pf-tag">TikTok</span>
+                  <h4>Kênh TikTok CEO Unite Group</h4>
+                  <p>Nội dung, quay dựng và vận hành kênh cho CEO; nhiều clip lan tỏa.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="Short-form Video"><svg class="ico" aria-hidden="true"><use href="#i-smartphone"/></svg><span class="vh">Short-form Video</span></li><li data-tip="Hook Scripting"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><span class="vh">Hook Scripting</span></li><li data-tip="TikTok Trends"><svg class="ico" aria-hidden="true"><use href="#i-trend"/></svg><span class="vh">TikTok Trends</span></li></ul>
+                  <div class="pf-links">
+                    <a class="pf-more" href="https://www.tiktok.com/@linh.trng.i.koko" target="_blank" rel="noopener">Xem kênh<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-src="assets/img/tiktok-ceo-kenh-1600.webp" data-t="Trang kênh TikTok" data-d="Chuỗi video trải nghiệm và thử thách"></li>
+                  <li data-src="assets/img/tiktok-ceo-video-1600.webp" data-t="Video ghim 13,1K lượt xem" data-d="Trải nghiệm lái máy bay mô phỏng"></li>
+                </ul>
+              </article>
+          </div>
+        </div>
+        <div class="pf-group" role="tabpanel" id="g-design" aria-labelledby="t-design" hidden>
+          <h3 class="vh">Thiết kế đồ họa và truyền thông</h3>
+          <div class="pf-grid">
+              <article class="pf-card pf-wide" data-layer="card" id="pf-san-khau-moi">
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 5 ảnh Sân Khấu Mới — Nhà hát Trần Hữu Trang"><img src="assets/img/skm-co-trang-900.webp" alt="" width="900" height="506" loading="lazy" decoding="async"><img src="assets/img/skm-mot-moi-tinh-900.webp" alt="" width="900" height="506" loading="lazy" decoding="async"><span class="pf-count">5 ảnh</span></button>
+                <div class="pf-t">
+                  <span class="pf-when"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg>10/2026</span>
+                  <h4>Sân Khấu Mới&nbsp;— Nhà hát Trần Hữu Trang</h4>
+                  <p>Poster vở diễn, lịch diễn tháng 10, vé mời, nội quy sân khấu và poster tri ân 20/10.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="Photoshop"><img class="tl" src="assets/img/tools/photoshop.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Photoshop</span></li><li data-tip="Canva"><img class="tl" src="assets/img/tools/canva.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Canva</span></li><li data-tip="Typography"><svg class="ico" aria-hidden="true"><use href="#i-type"/></svg><span class="vh">Typography</span></li><li data-tip="AI workflow"><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg><span class="vh">AI workflow</span></li></ul>
+                  <div class="pf-links">
+                    <span class="pf-nums"><span>Facebook</span><a href="https://www.facebook.com/share/p/1Dn11mkxVY/" target="_blank" rel="noopener" aria-label="Bài đăng Facebook 1">01</a><a href="https://www.facebook.com/share/p/14tHGvuoFyy/" target="_blank" rel="noopener" aria-label="Bài đăng Facebook 2">02</a><a href="https://www.facebook.com/share/p/1G8LihP3o5/" target="_blank" rel="noopener" aria-label="Bài đăng Facebook 3">03</a><a href="https://www.facebook.com/share/p/1E2W87eEBp/" target="_blank" rel="noopener" aria-label="Bài đăng Facebook 4">04</a></span>
+                  </div>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-src="assets/img/skm-co-trang-1600.webp" data-t="Poster vở diễn cổ trang" data-d="Key visual chính, tông vàng nâu cổ điển"></li>
+                  <li data-src="assets/img/skm-mot-moi-tinh-1600.webp" data-t="Poster vở Một Mối Tình" data-d="Ánh hoàng hôn hoài cổ"></li>
+                  <li data-src="assets/img/skm-lich-dien-1600.webp" data-t="Lịch diễn tháng 10" data-d="Tổng hợp các suất diễn tại Nhà hát Trần Hữu Trang"></li>
+                  <li data-src="assets/img/skm-ve-moi-1600.webp" data-t="Vé mời" data-d="Thiết kế vé theo key visual vở diễn"></li>
+                  <li data-src="assets/img/skm-noi-quy-1600.webp" data-t="Nội quy sân khấu" data-d="Ấn phẩm hướng dẫn khán giả"></li>
+                </ul>
+              </article>
+              <article class="pf-card" data-layer="card" id="pf-leadership">
+                <button class="pf-cover pf-vid" type="button" data-pf aria-label="Xem 2 video Leadership — Sói Đầu Đàn"><img src="assets/img/soi-dau-dan-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 62%"><img src="assets/img/marketing-thuc-chien-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 40%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">2 video</span></button>
+                <div class="pf-t">
+                  <span class="pf-when"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg>10/2026</span>
+                  <h4>Leadership&nbsp;— Sói Đầu Đàn</h4>
+                  <p>Poster diễn giả tông tối – cam và video loop 9:16 cho khóa đào tạo nội bộ.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="Photoshop"><img class="tl" src="assets/img/tools/photoshop.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Photoshop</span></li><li data-tip="Typography"><svg class="ico" aria-hidden="true"><use href="#i-type"/></svg><span class="vh">Typography</span></li><li data-tip="Video Loop"><svg class="ico" aria-hidden="true"><use href="#i-loop"/></svg><span class="vh">Video Loop</span></li></ul>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-type="video" data-src="assets/video/soi-dau-dan.mp4" data-poster="assets/img/soi-dau-dan-poster.webp" data-t="Sói Đầu Đàn" data-d="Video loop 9:16 cho khóa đào tạo kỹ năng lãnh đạo"></li>
+                  <li data-type="video" data-src="assets/video/marketing-thuc-chien.mp4" data-poster="assets/img/marketing-thuc-chien-poster.webp" data-t="Marketing Thực Chiến" data-d="Video loop 9:16 giới thiệu diễn giả"></li>
+                </ul>
+              </article>
+              <article class="pf-card" data-layer="card" id="pf-nai-con">
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 6 ảnh Linh vật Nai Con — Unite Group"><img src="assets/img/nai-con-chan-dung-900.webp" alt="" width="900" height="851" loading="lazy" decoding="async" style="object-position:50% 40%"><span class="pf-count">6 ảnh</span></button>
+                <div class="pf-t">
+                  <h4>Linh vật Nai Con&nbsp;— Unite Group</h4>
+                  <p>Mascot cho fanpage: bộ nhận diện, bảng biểu cảm và bài đăng tương tác.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="Character Design"><svg class="ico" aria-hidden="true"><use href="#i-smile"/></svg><span class="vh">Character Design</span></li><li data-tip="AI Image Tools"><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg><span class="vh">AI Image Tools</span></li></ul>
+                  <div class="pf-links">
+                    <a class="pf-more" href="https://www.facebook.com/share/1G6RXWeVKw/" target="_blank" rel="noopener">Bài đăng Fanpage<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-src="assets/img/nai-con-chan-dung-1600.webp" data-t="Chân dung Nai Con" data-d="Mũ lưỡi trai và cặp kính tròn đặc trưng"></li>
+                  <li data-src="assets/img/nai-con-bo-nhan-dien-1600.webp" data-t="Bộ nhận diện mascot" data-d="Tham chiếu trang phục, phụ kiện và bảng màu"></li>
+                  <li data-src="assets/img/nai-con-bieu-cam-1600.webp" data-t="Bảng biểu cảm" data-d="Chín biểu cảm cho bài đăng và sticker"></li>
+                  <li data-src="assets/img/nai-con-casting-1600.webp" data-t="Casting Nai Con" data-d="Bài đăng tương tác: bạn thuộc hệ nhân viên nào?"></li>
+                  <li data-src="assets/img/nai-con-huong-noi-1600.webp" data-t="Hệ hướng nội" data-d="Series tính cách nhân viên văn phòng"></li>
+                  <li data-src="assets/img/nai-con-du-an-ma-1600.webp" data-t="Top 1 dự án ma" data-d="Bài đăng hài hước về đời sống công sở"></li>
+                </ul>
+              </article>
+              <article class="pf-card pf-span-3 pf-posters" data-layer="card" id="pf-fanpage">
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 13 ảnh Ấn phẩm Fanpage Unite Group"><img src="assets/img/fp-best-seller-1-900.webp" alt="" width="720" height="900" loading="lazy" decoding="async"><img src="assets/img/fp-thang-doi-900.webp" alt="" width="900" height="900" loading="lazy" decoding="async"><img src="assets/img/fp-lam-it-900.webp" alt="" width="720" height="900" loading="lazy" decoding="async"><img src="assets/img/fp-quyen-loi-900.webp" alt="" width="720" height="900" loading="lazy" decoding="async"><img src="assets/img/fp-luong-ve-900.webp" alt="" width="720" height="900" loading="lazy" decoding="async"><span class="pf-count">13 ảnh</span></button>
+                <div class="pf-t">
+                  <h4>Ấn phẩm Fanpage Unite Group</h4>
+                  <p>Bài đăng hằng tuần: vinh danh, tuyển dụng, thông điệp nội bộ và các series tương tác.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="Canva"><img class="tl" src="assets/img/tools/canva.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Canva</span></li><li data-tip="Photoshop"><img class="tl" src="assets/img/tools/photoshop.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Photoshop</span></li><li data-tip="Social Layouts"><svg class="ico" aria-hidden="true"><use href="#i-layout"/></svg><span class="vh">Social Layouts</span></li></ul>
+                  <div class="pf-links">
+                    <a class="pf-more" href="https://www.facebook.com/unitegroup.com.vn" target="_blank" rel="noopener">Xem Fanpage<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-src="assets/img/fp-best-seller-1-1600.webp" data-t="Vinh danh Best Seller" data-d="Poster vinh danh tháng 10/2026"></li>
+                  <li data-src="assets/img/fp-best-seller-2-1600.webp" data-t="Vinh danh Best Seller" data-d="Bộ poster vinh danh cá nhân"></li>
+                  <li data-src="assets/img/fp-best-team-1600.webp" data-t="Vinh danh Best Team" data-d="Poster vinh danh tập thể"></li>
+                  <li data-src="assets/img/fp-ket-qua-1600.webp" data-t="Kết quả chung cuộc" data-d="Công bố giải thưởng thi đua"></li>
+                  <li data-src="assets/img/fp-tan-quan-ly-1600.webp" data-t="Chúc mừng tân quản lý" data-d="Poster bổ nhiệm chi nhánh"></li>
+                  <li data-src="assets/img/fp-thang-doi-1600.webp" data-t="Thắng đời 1–0" data-d="Series trước và sau khi gia nhập"></li>
+                  <li data-src="assets/img/fp-truoc-sau-1600.webp" data-t="Trước và sau khi gia nhập" data-d="Phiên bản nền cỏ sân trường"></li>
+                  <li data-src="assets/img/fp-hai-kieu-nguoi-1600.webp" data-t="Có 2 kiểu người" data-d="Bài đăng so sánh vui nhộn"></li>
+                  <li data-src="assets/img/fp-lam-it-1600.webp" data-t="Làm ít việc hơn, hiệu quả hơn" data-d="Thông điệp đầu tuần"></li>
+                  <li data-src="assets/img/fp-quyen-loi-1600.webp" data-t="Gia nhập Unite Group" data-d="Poster tuyển dụng chuyên viên tư vấn"></li>
+                  <li data-src="assets/img/fp-sinh-vien-1600.webp" data-t="Alo các bạn sinh viên" data-d="Bài đăng tương tác theo địa điểm"></li>
+                  <li data-src="assets/img/fp-moi-ra-truong-1600.webp" data-t="Sinh viên mới ra trường" data-d="Bài đăng định hướng nghề nghiệp"></li>
+                  <li data-src="assets/img/fp-luong-ve-1600.webp" data-t="Lương về, lương về" data-d="Nai Con trong bài đăng ngày nhận lương"></li>
+                </ul>
+              </article>
+              <article class="pf-card pf-logo pf-posters" data-layer="card" id="pf-logo">
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 2 ảnh Biểu trưng cá nhân PT"><img src="assets/img/logo-pt-900.webp" alt="" width="900" height="900" loading="lazy" decoding="async"><img src="assets/img/logo-pt-mockup-900.webp" alt="" width="900" height="672" loading="lazy" decoding="async"><span class="pf-count">2 ảnh</span></button>
+                <div class="pf-t">
+                  <h4>Biểu trưng cá nhân PT</h4>
+                  <p>Monogram P và T như dải ruy băng vàng kim, dùng cho web, CV và mạng xã hội.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="Illustrator"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg><span class="vh">Illustrator</span></li><li data-tip="Photoshop"><img class="tl" src="assets/img/tools/photoshop.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Photoshop</span></li><li data-tip="Brand Identity"><svg class="ico" aria-hidden="true"><use href="#i-gem"/></svg><span class="vh">Brand Identity</span></li></ul>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-src="assets/img/logo-pt-1600.webp" data-t="Monogram PT" data-d="Bản vàng kim trên nền đen"></li>
+                  <li data-src="assets/img/logo-pt-mockup-1600.webp" data-t="Mockup biểu trưng" data-d="Logo dập nổi trên nền xám"></li>
+                </ul>
+              </article>
+          </div>
+        </div>
+        <div class="pf-group" role="tabpanel" id="g-web" aria-labelledby="t-web" hidden>
+          <h3 class="vh">Sản phẩm số và công cụ</h3>
+          <div class="pf-grid pf-grid-3">
+              <article class="pf-card" data-layer="card" id="pf-web-tuyen-dung">
+                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Trang tuyển dụng tương tác"><img src="assets/img/web-tuyen-dung-900.webp" alt="" width="900" height="439" loading="lazy" decoding="async"><span class="pf-count">1 ảnh</span></button>
+                <div class="pf-t">
+                  <h4>Trang tuyển dụng tương tác</h4>
+                  <p>Website tuyển dụng của Unite Group: vị trí, lộ trình phát triển và form ứng tuyển.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="HTML5"><img class="tl" src="assets/img/tools/html5.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">HTML5</span></li><li data-tip="CSS3"><img class="tl" src="assets/img/tools/css3.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">CSS3</span></li><li data-tip="JavaScript"><img class="tl" src="assets/img/tools/javascript.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">JavaScript</span></li><li data-tip="React"><img class="tl" src="assets/img/tools/react.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">React</span></li><li data-tip="GitHub Pages"><img class="tl" src="assets/img/tools/github.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">GitHub Pages</span></li></ul>
+                  <div class="pf-links">
+                    <a class="pf-more" href="https://unitemedia2010-oss.github.io/JD_UNITEGROUP/" target="_blank" rel="noopener">Xem website<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                    <a class="pf-more" href="https://github.com/unitemedia2010-oss/JD_UNITEGROUP" target="_blank" rel="noopener">Mã nguồn<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-src="assets/img/web-tuyen-dung-1600.webp" data-t="Trang chủ tuyển dụng" data-d="Chuyên viên tư vấn cho thuê căn hộ"></li>
+                </ul>
+              </article>
+              <article class="pf-card" data-layer="card" id="pf-web-staycation">
+                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Website Unite Staycation"><img src="assets/img/web-staycation-900.webp" alt="" width="900" height="439" loading="lazy" decoding="async"><span class="pf-count">1 ảnh</span></button>
+                <div class="pf-t">
+                  <h4>Website Unite Staycation</h4>
+                  <p>Giới thiệu căn hộ Staycation, kèm dashboard quản lý bán hàng và vận hành.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="Web Platform"><svg class="ico" aria-hidden="true"><use href="#i-monitor"/></svg><span class="vh">Web Platform</span></li><li data-tip="Dashboard"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg><span class="vh">Dashboard</span></li><li data-tip="Business Ops"><svg class="ico" aria-hidden="true"><use href="#i-briefcase"/></svg><span class="vh">Business Ops</span></li></ul>
+                  <div class="pf-links">
+                    <a class="pf-more" href="https://unitestaycation.com.vn" target="_blank" rel="noopener">Xem website<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-src="assets/img/web-staycation-1600.webp" data-t="Trang chủ Unite Staycation" data-d="Không gian riêng tư, đặt phòng trực tuyến"></li>
+                </ul>
+              </article>
+              <article class="pf-card" data-layer="card" id="pf-web-vinh-danh">
+                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 2 ảnh Bảng vinh danh chuyển động"><img src="assets/img/web-vinh-danh-1-900.webp" alt="" width="900" height="446" loading="lazy" decoding="async"><span class="pf-count">2 ảnh</span></button>
+                <div class="pf-t">
+                  <h4>Bảng vinh danh chuyển động</h4>
+                  <p>Tôn vinh cá nhân và tập thể xuất sắc bằng hiệu ứng chuyển động.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="React"><img class="tl" src="assets/img/tools/react.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">React</span></li><li data-tip="CSS Motion"><svg class="ico" aria-hidden="true"><use href="#i-pulse"/></svg><span class="vh">CSS Motion</span></li><li data-tip="Responsive"><svg class="ico" aria-hidden="true"><use href="#i-devices"/></svg><span class="vh">Responsive</span></li></ul>
+                  <div class="pf-links">
+                    <a class="pf-more" href="https://unitemedia2010-oss.github.io/unite-vinh-danh/#/share" target="_blank" rel="noopener">Xem website<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                    <a class="pf-more" href="https://github.com/unitemedia2010-oss/unite-vinh-danh" target="_blank" rel="noopener">Mã nguồn<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-src="assets/img/web-vinh-danh-1-1600.webp" data-t="Hạng mục Thống Soái" data-d="Bục vinh danh ba vị trí dẫn đầu"></li>
+                  <li data-src="assets/img/web-vinh-danh-2-1600.webp" data-t="Hạng mục Sư Tử" data-d="Bảng xếp hạng kèm danh sách chi tiết"></li>
+                </ul>
+              </article>
+              <article class="pf-card" data-layer="card" id="pf-web-ganlogo">
+                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Brand Image Studio (GanLoGo)"><img src="assets/img/web-ganlogo-900.webp" alt="" width="900" height="443" loading="lazy" decoding="async"><span class="pf-count">1 ảnh</span></button>
+                <div class="pf-t">
+                  <h4>Brand Image Studio (GanLoGo)</h4>
+                  <p>Gắn logo, khung avatar hàng loạt cho ảnh nhân sự ngay trên trình duyệt.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="Canvas API"><img class="tl" src="assets/img/tools/image-tool.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Canvas API</span></li><li data-tip="Client-side"><svg class="ico" aria-hidden="true"><use href="#i-cpu"/></svg><span class="vh">Client-side</span></li></ul>
+                  <div class="pf-links">
+                    <a class="pf-more" href="https://nitegroup-design.github.io/GanLoGo/" target="_blank" rel="noopener">Dùng thử<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                    <a class="pf-more" href="https://github.com/nitegroup-design/GanLoGo" target="_blank" rel="noopener">Mã nguồn<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-src="assets/img/web-ganlogo-1600.webp" data-t="Giao diện GanLoGo" data-d="Chọn ảnh, gắn khung và xuất hàng loạt"></li>
+                </ul>
+              </article>
+              <article class="pf-card" data-layer="card" id="pf-web-ai-studio">
+                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 2 ảnh AI Agency Studio"><img src="assets/img/web-ai-studio-2-900.webp" alt="" width="900" height="429" loading="lazy" decoding="async"><span class="pf-count">2 ảnh</span></button>
+                <div class="pf-t">
+                  <span class="pf-status"><i></i>Đang phát triển</span>
+                  <h4>AI Agency Studio</h4>
+                  <p>Hệ thống nhiều AI Agent: lồng tiếng, dịch video, đồng bộ lời bài hát, dựng web.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="Python"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg><span class="vh">Python</span></li><li data-tip="Multi-Agent"><img class="tl" src="assets/img/tools/multi-agent.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Multi-Agent</span></li><li data-tip="LLM API"><svg class="ico" aria-hidden="true"><use href="#i-plug"/></svg><span class="vh">LLM API</span></li><li data-tip="Automation"><img class="tl" src="assets/img/tools/workflow.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Automation</span></li></ul>
+                  <div class="pf-links">
+                    <a class="pf-more" href="https://nguyenphitruong1807-beep--voice-studio-web.us-east.modal.run/" target="_blank" rel="noopener">Voice Studio<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                    <a class="pf-more" href="https://unitemedia2010-oss.github.io/ai-video-translation-studio/" target="_blank" rel="noopener">Dịch video AI<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                    <a class="pf-more" href="https://nitegroup-design.github.io/koko-linh-birthday/" target="_blank" rel="noopener">Web sinh nhật<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-src="assets/img/web-ai-studio-2-1600.webp" data-t="Voice Studio" data-d="Kịch bản mới, vẫn là giọng của bạn"></li>
+                  <li data-src="assets/img/web-ai-studio-1-1600.webp" data-t="Karaoke Studio" data-d="Đồng bộ lời bài hát đến từng âm tiết"></li>
+                </ul>
+              </article>
+              <article class="pf-card" data-layer="card" id="pf-web-portfolio">
+                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Portfolio cá nhân"><img src="assets/img/site-cover.jpg" alt="" width="1440" height="810" loading="lazy" decoding="async"><span class="pf-count">1 ảnh</span></button>
+                <div class="pf-t">
+                  <h4>Portfolio cá nhân</h4>
+                  <p>Chính trang này: phim 3D mở đầu, giao diện vàng, xem tốt trên điện thoại.</p>
+                  <ul class="tools" aria-label="Công cụ"><li data-tip="HTML5"><img class="tl" src="assets/img/tools/html5.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">HTML5</span></li><li data-tip="CSS3"><img class="tl" src="assets/img/tools/css3.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">CSS3</span></li><li data-tip="WebGL2 3D"><svg class="ico" aria-hidden="true"><use href="#i-cube"/></svg><span class="vh">WebGL2 3D</span></li><li data-tip="GitHub Pages"><img class="tl" src="assets/img/tools/github.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">GitHub Pages</span></li></ul>
+                  <div class="pf-links">
+                    <a class="pf-more" href="https://github.com/phitruong600/portfolio-NPT" target="_blank" rel="noopener">Mã nguồn<svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </div>
+                <ul class="pf-items" hidden>
+                  <li data-src="assets/img/site-cover.jpg" data-t="Portfolio Nguyễn Phi Trường" data-d="Trang đầu với ảnh chân dung và phần giới thiệu"></li>
+                </ul>
+              </article>
+          </div>
+        </div>
+        <div class="album" id="album-bds" hidden><h4>Video bất động sản</h4><ul class="pf-items"><li data-type="video" data-src="assets/video/bds-review.mp4" data-poster="assets/img/bds-review-poster.webp" data-t="Review căn hộ The River Thủ Thiêm" data-d="Vlog một ngày đi xem căn 3PN view sông cùng KokoLinh"></li><li data-type="video" data-src="assets/video/tt-genesis-du-an.mp4" data-poster="assets/img/tt-genesis-du-an-poster.webp" data-t="Góc nhìn dự án" data-d="Vị trí, liên doanh chủ đầu tư và tiện ích trong 72 giây"></li><li data-type="video" data-src="assets/video/tt-genesis-ban-do.mp4" data-poster="assets/img/tt-genesis-ban-do-poster.webp" data-t="Bản đồ quy hoạch" data-d="Motion bản đồ phát sáng định vị dự án"></li><li data-type="video" data-src="assets/video/tt-genesis-hieu-ung.mp4" data-poster="assets/img/tt-genesis-hieu-ung-poster.webp" data-t="Hiệu ứng số liệu" data-d="Số liệu và biểu đồ giá tông cam điện ảnh"></li></ul></div><div class="album" id="album-gom" hidden><h4>Văn hóa · Làng gốm</h4><ul class="pf-items"><li data-type="video" data-src="assets/video/gom-1.mp4" data-poster="assets/img/gom-1-poster.webp" data-t="Làng gốm · Daily Cinema" data-d="Một ngày ở xưởng gốm: tráng men, vẽ tay, phơi bình"></li><li data-type="video" data-src="assets/video/gom-2.mp4" data-poster="assets/img/gom-2-poster.webp" data-t="Nét vẽ trên gốm" data-d="Hoa văn khắc tay trên bình và chén"></li></ul></div>
       </div>
     </section>
 
@@ -574,7 +635,7 @@
               <li>Nhân sự, lãnh đạo phản hồi hài lòng</li>
               <li>Sự kiện chỉn chu, luôn có giải pháp</li>
             </ul>
-            <ul class="tools" aria-label="Công cụ"><li data-tip="Lightroom"><svg class="ico" aria-hidden="true"><use href="#i-sliders"/></svg><span class="vh">Lightroom</span></li><li data-tip="Canva"><svg class="ico" aria-hidden="true"><use href="#i-palette"/></svg><span class="vh">Canva</span></li><li data-tip="CapCut"><svg class="ico" aria-hidden="true"><use href="#i-scissors"/></svg><span class="vh">CapCut</span></li><li data-tip="Hypic"><svg class="ico" aria-hidden="true"><use href="#i-wand"/></svg><span class="vh">Hypic</span></li><li data-tip="AI tools"><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg><span class="vh">AI tools</span></li></ul>
+            <ul class="tools" aria-label="Công cụ"><li data-tip="Lightroom"><img class="tl" src="assets/img/tools/lightroom.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Lightroom</span></li><li data-tip="Canva"><img class="tl" src="assets/img/tools/canva.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Canva</span></li><li data-tip="CapCut"><img class="tl" src="assets/img/tools/capcut.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">CapCut</span></li><li data-tip="Hypic"><img class="tl" src="assets/img/tools/hypic.webp" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Hypic</span></li><li data-tip="AI tools"><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg><span class="vh">AI tools</span></li></ul>
           </article>
           <article class="xp-card" data-layer="card">
             <div class="xp-top"><span class="xp-ico"><svg class="ico" aria-hidden="true"><use href="#i-monitor"/></svg></span><span class="xp-when">09/2025 – nay</span></div>
@@ -585,7 +646,7 @@
               <li><a href="https://unitestaycation.com.vn/" target="_blank" rel="noopener"><b>Web kinh doanh Unite Staycation</b><span>Từ bán hàng đến quản lý, thu hút khách</span><svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
               <li><a href="https://nitegroup-design.github.io/GanLoGo/" target="_blank" rel="noopener"><b>Brand Image Studio</b><span>Gắn logo, khung avatar hàng loạt</span><svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
             </ul>
-            <ul class="tools" aria-label="Công cụ"><li data-tip="Codex"><svg class="ico" aria-hidden="true"><use href="#i-terminal"/></svg><span class="vh">Codex</span></li><li data-tip="Claude"><svg class="ico" aria-hidden="true"><use href="#i-chatspark"/></svg><span class="vh">Claude</span></li><li data-tip="Antigravity"><svg class="ico" aria-hidden="true"><use href="#i-orbit"/></svg><span class="vh">Antigravity</span></li><li data-tip="OpenCode"><svg class="ico" aria-hidden="true"><use href="#i-window"/></svg><span class="vh">OpenCode</span></li><li data-tip="VS Code"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg><span class="vh">VS Code</span></li><li data-tip="GitHub"><svg class="ico" aria-hidden="true"><use href="#i-git"/></svg><span class="vh">GitHub</span></li><li data-tip="Supabase"><svg class="ico" aria-hidden="true"><use href="#i-database"/></svg><span class="vh">Supabase</span></li><li data-tip="Apps Script"><svg class="ico" aria-hidden="true"><use href="#i-sheet"/></svg><span class="vh">Apps Script</span></li></ul>
+            <ul class="tools" aria-label="Công cụ"><li data-tip="Codex"><img class="tl" src="assets/img/tools/codex.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Codex</span></li><li data-tip="Claude"><img class="tl" src="assets/img/tools/claude.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Claude</span></li><li data-tip="Antigravity"><img class="tl" src="assets/img/tools/antigravity.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Antigravity</span></li><li data-tip="OpenCode"><img class="tl" src="assets/img/tools/opencode.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">OpenCode</span></li><li data-tip="VS Code"><img class="tl" src="assets/img/tools/vscode.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">VS Code</span></li><li data-tip="GitHub"><img class="tl" src="assets/img/tools/github.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">GitHub</span></li><li data-tip="Supabase"><img class="tl" src="assets/img/tools/supabase.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Supabase</span></li><li data-tip="Apps Script"><img class="tl" src="assets/img/tools/apps-script.svg" alt="" width="24" height="24" loading="lazy" decoding="async"><span class="vh">Apps Script</span></li></ul>
           </article>
           <div class="xp-stack">
             <article class="xp-card" data-layer="card">
@@ -616,10 +677,10 @@
           <h2 class="h2">Công cụ &amp; nền tảng</h2>
         </div>
         <div class="stack-grid">
-          <div class="stack-card" data-layer="card" data-role="testimonial"><h3><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg>Sáng tạo &amp; Video</h3><ul class="tool-grid"><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-sliders"/></svg></span>Lightroom</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></span>Photoshop</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-palette"/></svg></span>Canva</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-scissors"/></svg></span>CapCut</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-wand"/></svg></span>Hypic</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-color"/></svg></span>Color grading</li></ul></div>
-          <div class="stack-card" data-layer="card" data-role="testimonial-2"><h3><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg>Frontend &amp; Web</h3><ul class="tool-grid"><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-filecode"/></svg></span>HTML5</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-hash"/></svg></span>CSS3</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-braces"/></svg></span>JavaScript</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-blocks"/></svg></span>React</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-git"/></svg></span>GitHub Pages</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-rocket"/></svg></span>Vercel</li></ul></div>
-          <div class="stack-card" data-layer="card"><h3><svg class="ico" aria-hidden="true"><use href="#i-database"/></svg>Dữ liệu &amp; Tự động hóa</h3><ul class="tool-grid"><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-database"/></svg></span>Supabase</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-cloud"/></svg></span>Firebase</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-sheet"/></svg></span>Apps Script</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-flow"/></svg></span>Workflow</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-image"/></svg></span>Canvas API</li></ul></div>
-          <div class="stack-card" data-layer="card"><h3><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg>AI &amp; Motion</h3><ul class="tool-grid"><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-chatspark"/></svg></span>Claude</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-terminal"/></svg></span>Codex</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-orbit"/></svg></span>Antigravity</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-window"/></svg></span>OpenCode</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-filmspark"/></svg></span>AI Motion</li><li><span class="ti"><svg class="ico" aria-hidden="true"><use href="#i-network"/></svg></span>Multi-Agent</li></ul></div>
+          <div class="stack-card" data-layer="card" data-role="testimonial"><h3><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg>Sáng tạo &amp; Video</h3><ul class="tool-grid"><li><span class="ti"><img class="tl" src="assets/img/tools/lightroom.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>Lightroom</li><li><span class="ti"><img class="tl" src="assets/img/tools/photoshop.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>Photoshop</li><li><span class="ti"><img class="tl" src="assets/img/tools/canva.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>Canva</li><li><span class="ti"><img class="tl" src="assets/img/tools/capcut.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>CapCut</li><li><span class="ti"><img class="tl" src="assets/img/tools/hypic.webp" alt="" width="24" height="24" loading="lazy" decoding="async"></span>Hypic</li><li><span class="ti"><img class="tl" src="assets/img/tools/grading.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>Color grading</li></ul></div>
+          <div class="stack-card" data-layer="card" data-role="testimonial-2"><h3><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg>Frontend &amp; Web</h3><ul class="tool-grid"><li><span class="ti"><img class="tl" src="assets/img/tools/html5.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>HTML5</li><li><span class="ti"><img class="tl" src="assets/img/tools/css3.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>CSS3</li><li><span class="ti"><img class="tl" src="assets/img/tools/javascript.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>JavaScript</li><li><span class="ti"><img class="tl" src="assets/img/tools/react.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>React</li><li><span class="ti"><img class="tl" src="assets/img/tools/github.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>GitHub Pages</li><li><span class="ti"><img class="tl" src="assets/img/tools/vercel.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>Vercel</li></ul></div>
+          <div class="stack-card" data-layer="card"><h3><svg class="ico" aria-hidden="true"><use href="#i-database"/></svg>Dữ liệu &amp; Tự động hóa</h3><ul class="tool-grid"><li><span class="ti"><img class="tl" src="assets/img/tools/supabase.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>Supabase</li><li><span class="ti"><img class="tl" src="assets/img/tools/firebase.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>Firebase</li><li><span class="ti"><img class="tl" src="assets/img/tools/apps-script.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>Apps Script</li><li><span class="ti"><img class="tl" src="assets/img/tools/workflow.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>Workflow</li><li><span class="ti"><img class="tl" src="assets/img/tools/image-tool.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>Canvas API</li></ul></div>
+          <div class="stack-card" data-layer="card"><h3><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg>AI &amp; Motion</h3><ul class="tool-grid"><li><span class="ti"><img class="tl" src="assets/img/tools/claude.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>Claude</li><li><span class="ti"><img class="tl" src="assets/img/tools/codex.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>Codex</li><li><span class="ti"><img class="tl" src="assets/img/tools/antigravity.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>Antigravity</li><li><span class="ti"><img class="tl" src="assets/img/tools/opencode.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>OpenCode</li><li><span class="ti"><img class="tl" src="assets/img/tools/ai-motion.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>AI Motion</li><li><span class="ti"><img class="tl" src="assets/img/tools/multi-agent.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span>Multi-Agent</li></ul></div>
         </div>
         <div class="edu-box">
           <span class="edu-ico"><svg class="ico" aria-hidden="true"><use href="#i-grad"/></svg></span>
@@ -636,10 +697,10 @@
           <h2 class="h2">Giải pháp sáng tạo toàn diện</h2>
         </div>
         <div class="services">
-          <article class="svc" data-layer="card"><div class="svc-media"><img src="assets/img/cong-dong-trinh-dien-900.webp" alt="Đêm diễn cổ phục ngoài trời" width="900" height="600" loading="lazy"><span class="svc-ico"><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg></span></div><div class="svc-t"><h3>Nhiếp ảnh &amp; Hậu kỳ</h3><p>Sự kiện, chân dung, nội thất và bất động sản; color grading, retouch tự nhiên.</p></div></article>
-          <article class="svc" data-layer="card"><div class="svc-media"><img src="assets/img/skm-mot-moi-tinh-900.webp" alt="Poster vở Một Mối Tình" width="900" height="506" loading="lazy"><span class="svc-ico"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg></span></div><div class="svc-t"><h3>Thiết kế &amp; Nhận diện</h3><p>Poster sự kiện, key visual, mascot và bộ ấn phẩm truyền thông.</p></div></article>
-          <article class="svc" data-layer="card"><div class="svc-media"><img src="assets/img/fight100-900.webp" alt="Ảnh bìa vlog boxing Fight100" width="507" height="900" loading="lazy" style="object-position:50% 50%"><span class="svc-ico"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg></span></div><div class="svc-t"><h3>Video &amp; Motion</h3><p>Video ngắn, video dọc TikTok/Reels, video BĐS, video loop và AI Motion.</p></div></article>
-          <article class="svc" data-layer="card"><div class="svc-media"><img src="assets/img/web-vinh-danh-1-900.webp" alt="Bảng vinh danh chuyển động" width="900" height="446" loading="lazy"><span class="svc-ico"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg></span></div><div class="svc-t"><h3>Website &amp; Giải pháp số</h3><p>Website giới thiệu, landing page tuyển dụng, bảng vinh danh và công cụ nội bộ.</p></div></article>
+          <article class="svc" data-layer="card"><div class="svc-media"><img src="assets/img/cong-dong-trinh-dien-900.webp" alt="Đêm diễn cổ phục ngoài trời" width="900" height="600" loading="lazy" decoding="async"><span class="svc-ico"><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg></span></div><div class="svc-t"><h3>Nhiếp ảnh &amp; Hậu kỳ</h3><p>Sự kiện, chân dung, nội thất và bất động sản; color grading, retouch tự nhiên.</p></div></article>
+          <article class="svc" data-layer="card"><div class="svc-media"><img src="assets/img/skm-mot-moi-tinh-900.webp" alt="Poster vở Một Mối Tình" width="900" height="506" loading="lazy" decoding="async"><span class="svc-ico"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg></span></div><div class="svc-t"><h3>Thiết kế &amp; Nhận diện</h3><p>Poster sự kiện, key visual, mascot và bộ ấn phẩm truyền thông.</p></div></article>
+          <article class="svc" data-layer="card"><div class="svc-media"><video class="svc-loop" muted loop playsinline preload="none" poster="assets/img/tt-genesis-ban-do-poster.webp" data-src="assets/video/tt-genesis-ban-do.mp4" aria-label="Video bản đồ dự án TT Genesis"></video><button class="svc-play" type="button" data-album="album-bds"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg><span>Video BĐS</span></button><span class="svc-ico"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg></span></div><div class="svc-t"><h3>Video &amp; Motion</h3><p>Video BĐS, video dọc TikTok/Reels, vlog trải nghiệm, video loop và AI Motion.</p></div></article>
+          <article class="svc" data-layer="card"><div class="svc-media"><img src="assets/img/web-vinh-danh-1-900.webp" alt="Bảng vinh danh chuyển động" width="900" height="446" loading="lazy" decoding="async"><span class="svc-ico"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg></span></div><div class="svc-t"><h3>Website &amp; Giải pháp số</h3><p>Website giới thiệu, landing page tuyển dụng, bảng vinh danh và công cụ nội bộ.</p></div></article>
         </div>
         <div class="flow" id="process">
           <div class="flow-head">
@@ -676,7 +737,7 @@
           <div><dt><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg>Mạng xã hội</dt><dd class="soc"><a href="https://www.facebook.com/share/1bp5kH6R7M/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/metaal526/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@naoondoitennha" target="_blank" rel="noopener">TikTok</a></dd></div>
         </dl>
         <footer class="foot">
-          <a class="brand" href="#site"><img src="assets/img/logo-mark-192.png" alt="" width="152" height="192"><span>Nguyễn Phi Trường</span></a>
+          <a class="brand" href="#site"><img src="assets/img/logo-3d-mark.webp" alt="" width="115" height="144"><span>Nguyễn Phi Trường</span></a>
           <q>Creating Visuals. Building Digital Experiences.</q>
           <p class="foot-words">Nhiếp ảnh <i></i> Thiết kế <i></i> Video <i></i> Web &amp; AI</p>
           <small>© 2026 Nguyễn Phi Trường. Multimedia Creative &amp; Creative Technologist.</small>

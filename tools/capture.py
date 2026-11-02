@@ -9,7 +9,8 @@ from PIL import Image
 Image.MAX_IMAGE_PIXELS = None
 ROOT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..'); OUT=os.path.join(ROOT,'assets','film'); PAD=28; BAND=1024; OV=16
 os.makedirs(OUT, exist_ok=True)
-for f in os.listdir(OUT): os.remove(os.path.join(OUT,f))
+for f in os.listdir(OUT):
+    if f != 'TILE-spin.webp': os.remove(os.path.join(OUT,f))   # the turning logo frames are rendered separately
 JS_MEASURE = """()=>{
  const R=e=>{const b=e.getBoundingClientRect();return {x:b.left+scrollX,y:b.top+scrollY,w:b.width,h:b.height}};
  const els=[...document.querySelectorAll('[data-layer]:not([data-layer=tile-hi])')].filter(e=>{const b=e.getBoundingClientRect();return b.width>0&&b.height>0});

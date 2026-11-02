@@ -242,11 +242,12 @@
     'varying float vA;',
     'varying float vGlow;',
     'varying float vTone;',
+    'varying float vSoft;',
     FLOW,
     'void main(){',
     // aRnd.w: when this dot arrives / breathes out — a noise cloud over the logo, so whole patches move together
     '  float trig = aRnd.w;',
-    '  float f = smoothstep(trig * 0.58, trig * 0.58 + 0.42, uForm);',
+    '  float f = smoothstep(trig * 0.45, trig * 0.45 + 0.55, uForm);',
     '  float d = smoothstep(trig * 0.62, trig * 0.62 + 0.38, uDis);',
     '  vec3 fl = flow3(position * 2.2 + aRnd.xyz * 6.0, uTime);',
     '  vec3 lp = position + fl * 0.016;',
@@ -260,7 +261,7 @@
     '  vec3 dust = vec3(aDust.x * uHalf.x * 1.08 * k, yy * uHalf.y * 1.12 * k, dz);',
     '  dust += flow3(dust * 0.35 + aRnd.zxy * 4.0, uTime * 0.45) * 0.28;',
     '  float sw = sin(f * 3.14159265);',
-    '  vec3 pos = mix(dust, home, f) + fl * sw * 0.5;',
+    '  vec3 pos = mix(dust, home, f) + fl * sw * 0.8;',
     '  vec4 mv = viewMatrix * vec4(pos, 1.0);',
     '  vec4 cp = projectionMatrix * mv;',
     // the cursor (or a finger) parts the dots; its recent path heals over a second
@@ -278,9 +279,11 @@
     '  gl_Position = cp;',
     '  vGlow = sw + sin(d * 3.14159265) * 0.7 + clamp(length(push) * 12.0, 0.0, 1.0);',
     '  float tw = 0.78 + 0.34 * sin(uTime * 3.2 + aRnd.y * 40.0);',
-    '  gl_PointSize = uPx * (0.6 + aRnd.z * 0.8) * (1.0 + vGlow * 0.35) * (10.0 / -mv.z);',
+    // once scattered the dots go soft and out of focus (bigger, fainter blobs) so the page sits on top
+    '  vSoft = 1.0 - smoothstep(0.0, 0.6, f);',
+    '  gl_PointSize = uPx * (0.6 + aRnd.z * 0.8) * (1.0 + vGlow * 0.35) * (1.0 + vSoft * 1.9) * (10.0 / -mv.z);',
     '  float aF = (0.62 + aRnd.x * 0.38) * (1.0 - smoothstep(0.62, 1.0, d));',
-    '  float aD = uDustA * step(aRnd.y, uDustShare) * (0.35 + aRnd.x * 0.65);',
+    '  float aD = uDustA * step(aRnd.y, uDustShare) * (0.35 + aRnd.x * 0.65) * 0.55;',
     '  vA = uAlpha * tw * mix(aD, aF, f);',
     '  vTone = aRnd.z;',
     '}'
@@ -291,11 +294,12 @@
     'varying float vA;',
     'varying float vGlow;',
     'varying float vTone;',
+    'varying float vSoft;',
     'void main(){',
     '  vec2 uv = gl_PointCoord - 0.5;',
     '  float r = length(uv);',
     '  if (r > 0.5 || vA < 0.004) discard;',
-    '  float a = smoothstep(0.5, 0.1, r) * vA;',
+    '  float a = mix(smoothstep(0.5, 0.1, r), exp(-r * r * 16.0) * (1.0 - smoothstep(0.42, 0.5, r)), vSoft) * vA;',
     '  vec3 c = mix(uColA, uColB, vTone);',
     '  c = mix(c, uColHi, clamp(vGlow * 0.45, 0.0, 1.0));',
     '  gl_FragColor = vec4(c * a, a);',
@@ -369,7 +373,7 @@
     for (i = 0; i < 8; i++) trail.push(new THREE.Vector3(9, 9, 0));
     var U = {
       uTime: { value: 0 }, uForm: { value: 0 }, uDis: { value: 0 }, uScroll: { value: 0 }, uAspect: { value: 1 },
-      uPx: { value: 2.3 * dpr }, uAlpha: { value: 0 }, uDustA: { value: 0.55 }, uDustShare: { value: MOBILE ? 0.5 : 0.42 },
+      uPx: { value: 2.3 * dpr }, uAlpha: { value: 0 }, uDustA: { value: 0.55 }, uDustShare: { value: MOBILE ? 0.4 : 0.34 },
       uLogo: { value: new THREE.Matrix4() }, uHalf: { value: new THREE.Vector2(1, 1) }, uTrail: { value: trail },
       uColA: { value: new THREE.Color(0.70, 0.50, 0.17) }, uColB: { value: new THREE.Color(0.52, 0.38, 0.19) }, uColHi: { value: new THREE.Color(0.93, 0.74, 0.32) }
     };
@@ -409,8 +413,9 @@
       var vw = Wc, vh = Hc, upp = 2 * HH / vh, wide = vw >= 900;
       var hr = hero ? hero.getBoundingClientRect() : { top: -1e4, height: 1 };
       var cr = contact ? contact.getBoundingClientRect() : { top: 1e4, left: 0, width: vw, height: 1 };
-      var fH = 1 - sstep(0.1, 0.62, -hr.top / Math.max(1, hr.height));
-      var fC = sstep(0.95, 0.32, cr.top / vh);
+      // a slow drift apart over the whole height of the introduction, and a slow gathering at the contact panel
+      var fH = 1 - sstep(0.03, 1.0, -hr.top / Math.max(1, hr.height));
+      var fC = sstep(1.0, 0.25, cr.top / vh);
       var cx, cy, hpx;
       if (fH >= fC && portrait) {
         var pr = portrait.getBoundingClientRect();
@@ -421,7 +426,7 @@
         cx = cr.left + cr.width * 0.64; cy = cr.top + 400; hpx = Math.min(vw * 1.08, 440);
       }
       var target = Math.max(fH, fC) * eio(reveal);
-      form += (target - form) * (Q.has('fxnow') ? 1 : 1 - Math.exp(-dt * 5));
+      form += (target - form) * (Q.has('fxnow') ? 1 : 1 - Math.exp(-dt * 1.5));
       U.uForm.value = form;
       look[0] += (ptr.hx - look[0]) * (1 - Math.exp(-dt * 2)); look[1] += (ptr.hy - look[1]) * (1 - Math.exp(-dt * 2));
       E.set(0.08 * Math.sin(clock * 0.15 + 1) - look[1] * 0.2, 0.3 * Math.sin(clock * 0.19) + look[0] * 0.35, 0.03 * Math.sin(clock * 0.11), 'YXZ');
@@ -473,12 +478,8 @@
   // ---------- start both once the visitor reaches the page (after the intro film) ----------
   // start once the visitor has reached the page and the scroll has come to rest (the intro film glides down to it),
   // so the set-up work never lands in the middle of that glide; three.js is fetched as soon as the glide begins
-  function preloadThree() {
-    if (window.THREE || doc.querySelector('link[data-three]')) return;
-    var l = doc.createElement('link');
-    l.rel = 'preload'; l.as = 'script'; l.href = THREE_SRC; l.setAttribute('data-three', '');
-    doc.head.appendChild(l);
-  }
+  function preloadThree() { withThree(function () {}); }   // fetch (and parse off the main thread) as the glide begins
+
   function whenSiteShown(cb) {
     var intro = doc.getElementById('intro'), done = false, t = 0;
     function onSite() { return !intro || intro.getBoundingClientRect().bottom < window.innerHeight * 0.6; }

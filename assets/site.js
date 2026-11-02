@@ -143,6 +143,22 @@
     if (lastFocus) lastFocus.focus();
     doc.dispatchEvent(new CustomEvent('npt:lightbox', { detail: false }));
   }
+  // albums opened from elsewhere (the Video & Motion service: three real-estate clips)
+  Array.prototype.forEach.call(doc.querySelectorAll('[data-album]'), function (b) {
+    b.addEventListener('click', function () { var a = doc.getElementById(b.getAttribute('data-album')); if (a) openSet(a); });
+  });
+  // the service clip plays (muted, looping) only while it is on screen
+  Array.prototype.forEach.call(doc.querySelectorAll('video.svc-loop'), function (v) {
+    if (capture || !('IntersectionObserver' in window)) return;
+    var rm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    new IntersectionObserver(function (e) {
+      if (e[0].isIntersecting && !rm) {
+        if (!v.getAttribute('src')) { v.src = v.getAttribute('data-src'); }
+        var pr = v.play(); if (pr && pr.catch) pr.catch(function () {});
+      } else if (!v.paused) v.pause();
+    }, { threshold: 0.3 }).observe(v);
+    v.addEventListener('click', function () { var a = doc.getElementById('album-bds'); if (a) openSet(a); });
+  });
   function firstSrc(card) { var li = card && card.querySelector('.pf-items li:not([data-type="video"])'); return li && li.getAttribute('data-src'); }
   Array.prototype.forEach.call(doc.querySelectorAll('[data-pf]'), function (b) {
     var card = b.closest('.pf-card');

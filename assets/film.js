@@ -641,7 +641,7 @@
       draws.push({ it: it, st: st, z: st.z });
     });
     if (!NOPIECES) TILES.forEach(function (T) {
-      var ts = tileState(T, t, cam);
+      var ts = tileState(T, t, cam); if (ts) ts.t = t;
       if (!ts) return;
       draws.push({ tile: T, ts: ts, z: ts.cam ? (unproject(cam, ts.sx, ts.sy, ts.z))[2] : ts.P[2] });
     });
@@ -736,10 +736,24 @@
       shadow(cam, cxw - half + 0.10 * zc, cyw - foot + 4 + 0.36 * zc, cxw + half + 0.10 * zc, cyw + foot + 4 + 0.36 * zc, half, (9 + 0.5 * zc) / 2, 0.2 * (ts.a == null ? 1 : ts.a) * (1 - sstep(220, 420, zc)));
     }
     gl.drawBuffers(DB_BOTH); gl.useProgram(P_TEX.p); setCam(P_TEX, cam); setCommon(P_TEX, focus);
-    var u = P_TEX.u; gl.uniform1f(u.uA, ts.a == null ? 1 : ts.a); gl.uniform1f(u.uMaskOn, 0); gl.uniform1f(u.uPieceFade, 0); gl.uniform1f(u.uHaze, 0);
+    var u = P_TEX.u, A = ts.a == null ? 1 : ts.a; gl.uniform1f(u.uMaskOn, 0); gl.uniform1f(u.uPieceFade, 0); gl.uniform1f(u.uHaze, 0);
     gl.uniform4f(u.uTint, 0, 0, 0, 0); gl.uniform4f(u.uEdge, 0, 0, 0, 0);
-    gl.bindTexture(gl.TEXTURE_2D, tex); quad(P_TEX, O, Eu, Ev);
+    if (!SPIN) { gl.uniform1f(u.uA, A); gl.bindTexture(gl.TEXTURE_2D, tex); quad(P_TEX, O, Eu, Ev); return; }
+    // each monogram turns on its own axis: a frame of the turning logo, the quad rolled in its plane
+    var sp = SPINS[T.i % 4], t = ts.t || 0, th = (sp.r0 + sp.rw * Math.sin(0.6 * t + T.i * 1.9)) * s5(0, 1.0, t);
+    var C = [O[0] + (Eu[0] + Ev[0]) / 2, O[1] + (Eu[1] + Ev[1]) / 2, O[2] + (Eu[2] + Ev[2]) / 2], co = Math.cos(th), si = Math.sin(th);
+    var Eu2 = [co * Eu[0] + si * Ev[0], co * Eu[1] + si * Ev[1], co * Eu[2] + si * Ev[2]];
+    var Ev2 = [-si * Eu[0] + co * Ev[0], -si * Eu[1] + co * Ev[1], -si * Eu[2] + co * Ev[2]];
+    var O2 = [C[0] - (Eu2[0] + Ev2[0]) / 2, C[1] - (Eu2[1] + Ev2[1]) / 2, C[2] - (Eu2[2] + Ev2[2]) / 2];
+    var f = sp.f0 + sp.spd * 36 * t, f0 = Math.floor(f), fr = f - f0;
+    function cell(k) { k = ((k % 36) + 36) % 36; var cx = k % 6, cy = (k / 6) | 0; return [cx / 6, cy / 6, (cx + 1) / 6, (cy + 1) / 6]; }
+    gl.bindTexture(gl.TEXTURE_2D, SPIN.tex);
+    gl.uniform1f(u.uA, A); quad(P_TEX, O2, Eu2, Ev2, cell(f0));
+    if (fr > 0.02) { gl.uniform1f(u.uA, A * fr); quad(P_TEX, O2, Eu2, Ev2, cell(f0 + 1)); }
   }
+  var SPIN = null;
+  var SPINS = [{ f0: 2.6, spd: 0.15, r0: 0, rw: 0.22 }, { f0: 11, spd: -0.2, r0: -0.45, rw: 0.3 },
+               { f0: 20, spd: 0.12, r0: 0.5, rw: 0.26 }, { f0: 29, spd: -0.17, r0: 0.28, rw: 0.34 }];
 
   // ---------- DOM per frame ----------
   function domAt(t) {
@@ -877,6 +891,7 @@
       list.push({ kind: 'layer', L: L, url: BASE + L.id + (hiRes ? '@2' : '@1') + '.webp' });
     });
     list.push({ kind: 'tile', url: BASE + 'TILE@2.webp' });
+    list.push({ kind: 'spin', url: BASE + 'TILE-spin.webp' });
     var done = 0;
     return Promise.all(list.map(function (e) {
       return loadImage(e.url).then(function (im) { e.img = im; done++; progress(done / list.length * 0.9); });
@@ -887,6 +902,7 @@
       var tex = texFrom(e.img); e.img = null;
       if (e.kind === 'band') BANDS.push({ y0: e.b.y0, y1: e.b.y1, a: e.b.a, b: e.b.b, tex: tex });
       else if (e.kind === 'tile') TILE = { tex: tex, padRatio: DATA.tile.pad / DATA.tile.w };
+      else if (e.kind === 'spin') SPIN = { tex: tex };
       else {
         var L = e.L; if (L.role === 'logo-tile') { gl.deleteTexture(tex); return; }
         var key = L.role || L.kind, ord = orders[key] = (orders[key] || 0); orders[key]++;
