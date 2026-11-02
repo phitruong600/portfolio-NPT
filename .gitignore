@@ -4,3 +4,22 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# Heavy raw media files to protect Git repository and GitHub push limits (>50MB)
+media/**/*.mp4
+media/**/*.mov
+media/**/*.avi
+media/**/*.mkv
+media/**/*.wmv
+media/**/*.psd
+media/**/*.ai
+media/**/*.zip
+media/**/*.rar
+media/**/*.7z
+media/**/*.raw
+media/**/*.cr2
+media/**/*.cr3
+media/**/*.nef
+media/**/*.arw
+media/**/raw/
+media/**/videos_heavy/

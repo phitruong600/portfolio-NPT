@@ -1,0 +1,31 @@
+================================================================================
+DỰ ÁN: Poster Kịch Sân Khấu Mới (Trần Hữu Trang)
+Phân loại: 02. Thiết Kế Đồ Họa & Nhận Diện Thương Hiệu (Graphic Design & Branding)
+================================================================================
+
+1. THÔNG TIN CHUNG:
+- Tên hiển thị: Poster Kịch Sân Khấu Mới (Trần Hữu Trang)
+- Vai trò thực hiện: Thiết kế poster vở diễn kịch, lịch diễn 4 suất và ấn phẩm quà tặng 20/10
+- Công cụ / Công nghệ: Photoshop, Typography, Key Visual
+- Ghi chú: Biểu diễn tại Nhà hát Trần Hữu Trang tháng 10/2026.
+
+2. CÁC ĐƯỜNG LINK LIÊN KẾT (Điền hoặc cập nhật link vào đây):
+- Link Website / Demo Trực Tiếp : 
+- Link Mã Nguồn GitHub        : 
+- Link Video (TikTok/YouTube)  : 
+- Link Thiết Kế (Figma/Canva)  : 
+- Link Google Drive / Cloud    : 
+- Link Bài Viết / Mạng Xã Hội  : 
+
+3. HƯỚNG DẪN BỎ ẢNH & VIDEO VÀO THƯ MỤC NÀY:
+- Bỏ từ 3 đến 8 hình ảnh đẹp nhất của dự án vào thư mục này.
+- Ảnh bìa đại diện nên đặt tên là: 01_cover.jpg (hoặc 01_cover.png, 01_cover.webp)
+- Các ảnh tiếp theo đặt tên là: 02.jpg, 03.jpg, 04.jpg...
+- Nếu có file video ngắn (dưới 50MB): có thể bỏ file .mp4 vào đây hoặc dán link online ở mục số 2.
+- Quy cách ảnh gợi ý:
+  + Giao diện Web / Desktop: tỉ lệ 16:9 (khoảng 1920x1080 px).
+  + Thiết kế poster / banner: tỉ lệ gốc chất lượng cao.
+  + Ảnh chân dung / sự kiện: chiều rộng tối thiểu 1600px.
+
+4. GHI CHÚ BỔ SUNG CỦA BẠN:
+(Bạn có thể viết thêm bất kỳ lưu ý hoặc yêu cầu hiển thị nào vào đây)

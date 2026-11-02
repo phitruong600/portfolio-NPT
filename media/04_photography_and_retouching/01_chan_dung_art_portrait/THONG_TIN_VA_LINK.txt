@@ -1,0 +1,31 @@
+================================================================================
+DỰ ÁN: Nhiếp Ảnh Chân Dung Nghệ Thuật (Art Portrait)
+Phân loại: 04. Nhiếp Ảnh & Retouching (Photography & Photo Editing)
+================================================================================
+
+1. THÔNG TIN CHUNG:
+- Tên hiển thị: Nhiếp Ảnh Chân Dung Nghệ Thuật (Art Portrait)
+- Vai trò thực hiện: Nhiếp ảnh & Color grading, Retouch da tự nhiên
+- Công cụ / Công nghệ: Sony / Canon, 85mm / 50mm, Lightroom, Photoshop Retouch
+- Ghi chú: Bộ sưu tập ảnh chân dung cá nhân, nghệ sĩ, concept nghệ thuật.
+
+2. CÁC ĐƯỜNG LINK LIÊN KẾT (Điền hoặc cập nhật link vào đây):
+- Link Website / Demo Trực Tiếp : 
+- Link Mã Nguồn GitHub        : 
+- Link Video (TikTok/YouTube)  : 
+- Link Thiết Kế (Figma/Canva)  : 
+- Link Google Drive / Cloud    : 
+- Link Bài Viết / Mạng Xã Hội  : 
+
+3. HƯỚNG DẪN BỎ ẢNH & VIDEO VÀO THƯ MỤC NÀY:
+- Bỏ từ 3 đến 8 hình ảnh đẹp nhất của dự án vào thư mục này.
+- Ảnh bìa đại diện nên đặt tên là: 01_cover.jpg (hoặc 01_cover.png, 01_cover.webp)
+- Các ảnh tiếp theo đặt tên là: 02.jpg, 03.jpg, 04.jpg...
+- Nếu có file video ngắn (dưới 50MB): có thể bỏ file .mp4 vào đây hoặc dán link online ở mục số 2.
+- Quy cách ảnh gợi ý:
+  + Giao diện Web / Desktop: tỉ lệ 16:9 (khoảng 1920x1080 px).
+  + Thiết kế poster / banner: tỉ lệ gốc chất lượng cao.
+  + Ảnh chân dung / sự kiện: chiều rộng tối thiểu 1600px.
+
+4. GHI CHÚ BỔ SUNG CỦA BẠN:
+(Bạn có thể viết thêm bất kỳ lưu ý hoặc yêu cầu hiển thị nào vào đây)

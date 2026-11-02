@@ -1,0 +1,31 @@
+================================================================================
+DỰ ÁN: Personal Portfolio Website (Nguyễn Phi Trường)
+Phân loại: 01. Sản Phẩm Số & Lập Trình Web (Web & Digital Products)
+================================================================================
+
+1. THÔNG TIN CHUNG:
+- Tên hiển thị: Personal Portfolio Website (Nguyễn Phi Trường)
+- Vai trò thực hiện: Thiết kế & Lập trình toàn diện Portfolio cá nhân với Film WebGL2 3D
+- Công cụ / Công nghệ: HTML5, CSS Modern Fluid, WebGL2 3D, Responsive, GitHub Pages
+- Ghi chú: Portfolio chính thức đang hoạt động.
+
+2. CÁC ĐƯỜNG LINK LIÊN KẾT (Điền hoặc cập nhật link vào đây):
+- Link Website / Demo Trực Tiếp : https://phitruong600.github.io/portfolio-NPT/
+- Link Mã Nguồn GitHub        : https://github.com/phitruong600/portfolio-NPT
+- Link Video (TikTok/YouTube)  : 
+- Link Thiết Kế (Figma/Canva)  : 
+- Link Google Drive / Cloud    : 
+- Link Bài Viết / Mạng Xã Hội  : 
+
+3. HƯỚNG DẪN BỎ ẢNH & VIDEO VÀO THƯ MỤC NÀY:
+- Bỏ từ 3 đến 8 hình ảnh đẹp nhất của dự án vào thư mục này.
+- Ảnh bìa đại diện nên đặt tên là: 01_cover.jpg (hoặc 01_cover.png, 01_cover.webp)
+- Các ảnh tiếp theo đặt tên là: 02.jpg, 03.jpg, 04.jpg...
+- Nếu có file video ngắn (dưới 50MB): có thể bỏ file .mp4 vào đây hoặc dán link online ở mục số 2.
+- Quy cách ảnh gợi ý:
+  + Giao diện Web / Desktop: tỉ lệ 16:9 (khoảng 1920x1080 px).
+  + Thiết kế poster / banner: tỉ lệ gốc chất lượng cao.
+  + Ảnh chân dung / sự kiện: chiều rộng tối thiểu 1600px.
+
+4. GHI CHÚ BỔ SUNG CỦA BẠN:
+(Bạn có thể viết thêm bất kỳ lưu ý hoặc yêu cầu hiển thị nào vào đây)
