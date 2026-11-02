@@ -82,7 +82,7 @@
           </div>
           <div class="hero-visual">
             <figure class="hero-portrait" data-layer="mockup" data-role="hero-mockup">
-              <img src="assets/img/portrait-truong-900.webp" alt="Chân dung Nguyễn Phi Trường" width="900" height="1342">
+              <img src="assets/img/portrait-truong-900.webp" alt="Chân dung Nguyễn Phi Trường" width="900" height="1342" fetchpriority="high">
               <figcaption class="portrait-badge"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span><b>TP. Hồ Chí Minh</b><small>Creating Visuals. Building Digital Experiences.</small></span></figcaption>
             </figure>
             <figure class="hero-snap" data-layer="photo"><img src="assets/img/truong-may-anh-900.webp" alt="Nguyễn Phi Trường cầm máy ảnh" width="897" height="900"></figure>
@@ -90,7 +90,7 @@
             <span class="orb orb-2" data-layer="chip" data-role="hero-chip" data-tip="Photoshop"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg><span class="vh">Photoshop</span></span>
             <span class="orb orb-3" data-layer="chip" data-role="hero-chip" data-tip="CapCut"><svg class="ico" aria-hidden="true"><use href="#i-scissors"/></svg><span class="vh">CapCut</span></span>
             <span class="orb orb-4" data-layer="chip" data-tip="AI"><svg class="ico" aria-hidden="true"><use href="#i-sparkle"/></svg><span class="vh">AI</span></span>
-            <div class="tiles" aria-hidden="true"><span class="tile" data-layer="tile" data-role="logo-tile"><img src="assets/img/logo-mark-192.png" alt=""></span><span class="tile" data-layer="tile" data-role="logo-tile"><img src="assets/img/logo-mark-192.png" alt=""></span><span class="tile" data-layer="tile" data-role="logo-tile"><img src="assets/img/logo-mark-192.png" alt=""></span><span class="tile" data-layer="tile" data-role="logo-tile"><img src="assets/img/logo-mark-192.png" alt=""></span><small>Nhận diện NPT</small></div>
+            <div class="logo3d" data-logo3d data-layer="tile" data-role="logo-tile" data-tip="Kéo để xoay logo"><img class="logo3d-still" src="assets/img/logo-3d.webp" alt="Biểu trưng PT mạ vàng" width="560" height="560" decoding="async"></div>
             <span class="grid-patch gp-hero" aria-hidden="true"></span>
           </div>
           <div class="hero-body">
@@ -144,16 +144,19 @@
             <p class="label"><b>02.</b> Dự án</p>
             <h2 class="h2">Sản phẩm sáng tạo &amp; giải pháp số</h2>
           </div>
-          <div class="fan" data-layer="photo">
-            <button class="fan-nav" type="button" data-step="-1" aria-label="Lật sang trái"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-            <div class="fan-deck">
-              <button class="fan-card" data-k="-2" style="--k:-2;--a:2" type="button" data-open="pf-san-pham" aria-label="Sản phẩm thương mại"><img src="assets/img/sp-toan-canh-900.webp" alt="" loading="lazy"></button>
-              <button class="fan-card" data-k="-1" style="--k:-1;--a:1" type="button" data-open="pf-su-kien-cong-dong" aria-label="Sự kiện cộng đồng"><img src="assets/img/cong-dong-mua-vang-900.webp" alt="" loading="lazy"></button>
-              <button class="fan-card" data-k="0" style="--k:0;--a:0" type="button" data-open="pf-chan-dung" aria-label="Chân dung nghệ thuật"><img src="assets/img/cd-van-phong-900.webp" alt="" loading="lazy"></button>
-              <button class="fan-card" data-k="1" style="--k:1;--a:1" type="button" data-open="pf-nai-con" aria-label="Linh vật Nai Con"><img src="assets/img/nai-con-casting-900.webp" alt="" loading="lazy"></button>
-              <button class="fan-card" data-k="2" style="--k:2;--a:2" type="button" data-open="pf-phong-canh" aria-label="Phong cảnh và đời sống"><img src="assets/img/pc-suong-som-900.webp" alt="" loading="lazy"></button>
+          <div class="fan" data-layer="photo" aria-roledescription="carousel" aria-label="Các nhóm dự án tiêu biểu">
+            <div class="fan-row">
+              <button class="fan-nav" type="button" data-step="-1" aria-label="Nhóm trước"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+              <div class="fan-deck">
+              <button class="fan-card" data-k="-2" style="--k:-2;--a:2" type="button" data-open="pf-san-pham" data-g="Nhiếp ảnh" data-n="5 ảnh" aria-label="Sản phẩm thương mại, 5 ảnh"><img src="assets/img/sp-toan-canh-420.webp" alt="" decoding="async"></button>
+              <button class="fan-card" data-k="-1" style="--k:-1;--a:1" type="button" data-open="pf-su-kien-cong-dong" data-g="Nhiếp ảnh" data-n="17 ảnh" aria-label="Sự kiện cộng đồng, 17 ảnh"><img src="assets/img/cong-dong-mua-vang-420.webp" alt="" decoding="async"></button>
+              <button class="fan-card" data-k="0" style="--k:0;--a:0" type="button" data-open="pf-chan-dung" data-g="Nhiếp ảnh" data-n="7 ảnh" aria-label="Chân dung nghệ thuật, 7 ảnh"><img src="assets/img/cd-van-phong-420.webp" alt="" decoding="async"></button>
+              <button class="fan-card" data-k="1" style="--k:1;--a:1" type="button" data-open="pf-nai-con" data-g="Thiết kế" data-n="6 ảnh" aria-label="Linh vật Nai Con, 6 ảnh"><img src="assets/img/nai-con-casting-420.webp" alt="" decoding="async"></button>
+              <button class="fan-card" data-k="2" style="--k:2;--a:2" type="button" data-open="pf-phong-canh" data-g="Nhiếp ảnh" data-n="10 ảnh" aria-label="Phong cảnh và đời sống, 10 ảnh"><img src="assets/img/pc-suong-som-420.webp" alt="" decoding="async"></button>
+              </div>
+              <button class="fan-nav" type="button" data-step="1" aria-label="Nhóm sau"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
             </div>
-            <button class="fan-nav" type="button" data-step="1" aria-label="Lật sang phải"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+            <div class="fan-cap"><p class="fan-k"><b class="fan-n">03</b><span class="fan-of">/ 05</span><i></i><span class="fan-g">Nhiếp ảnh</span><i></i><span class="fan-c">7 ảnh</span></p><button class="fan-t" type="button"><span>Chân dung nghệ thuật</span><svg class="ico ar" aria-hidden="true"><use href="#i-arrow"/></svg></button><div class="fan-dots"><button class="fan-dot" type="button" data-i="0" aria-label="Sản phẩm thương mại"></button><button class="fan-dot" type="button" data-i="1" aria-label="Sự kiện cộng đồng"></button><button class="fan-dot" type="button" data-i="2" aria-label="Chân dung nghệ thuật" aria-current="true"></button><button class="fan-dot" type="button" data-i="3" aria-label="Linh vật Nai Con"></button><button class="fan-dot" type="button" data-i="4" aria-label="Phong cảnh và đời sống"></button></div></div>
           </div>
         </div>
         <div class="pf-tabs" role="tablist" aria-label="Nhóm dự án">
@@ -167,7 +170,7 @@
           <h3 class="vh">Sản phẩm số và công cụ</h3>
           <div class="pf-grid pf-grid-3">
               <article class="pf-card" data-layer="card" id="pf-web-tuyen-dung">
-                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Trang tuyển dụng tương tác"><img src="assets/img/web-tuyen-dung-900.webp" alt="" width="900" height="439" loading="lazy"><span class="pf-count">1 ảnh</span></button>
+                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Trang tuyển dụng tương tác"><img src="assets/img/web-tuyen-dung-900.webp" alt="" width="900" height="439" loading="lazy" decoding="async"><span class="pf-count">1 ảnh</span></button>
                 <div class="pf-t">
                   <h4>Trang tuyển dụng tương tác</h4>
                   <p>Website tuyển dụng của Unite Group: vị trí, lộ trình phát triển và form ứng tuyển.</p>
@@ -182,7 +185,7 @@
                 </ul>
               </article>
               <article class="pf-card" data-layer="card" id="pf-web-staycation">
-                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Website Unite Staycation"><img src="assets/img/web-staycation-900.webp" alt="" width="900" height="439" loading="lazy"><span class="pf-count">1 ảnh</span></button>
+                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Website Unite Staycation"><img src="assets/img/web-staycation-900.webp" alt="" width="900" height="439" loading="lazy" decoding="async"><span class="pf-count">1 ảnh</span></button>
                 <div class="pf-t">
                   <h4>Website Unite Staycation</h4>
                   <p>Giới thiệu căn hộ Staycation, kèm dashboard quản lý bán hàng và vận hành.</p>
@@ -196,7 +199,7 @@
                 </ul>
               </article>
               <article class="pf-card" data-layer="card" id="pf-web-vinh-danh">
-                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 2 ảnh Bảng vinh danh chuyển động"><img src="assets/img/web-vinh-danh-1-900.webp" alt="" width="900" height="446" loading="lazy"><span class="pf-count">2 ảnh</span></button>
+                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 2 ảnh Bảng vinh danh chuyển động"><img src="assets/img/web-vinh-danh-1-900.webp" alt="" width="900" height="446" loading="lazy" decoding="async"><span class="pf-count">2 ảnh</span></button>
                 <div class="pf-t">
                   <h4>Bảng vinh danh chuyển động</h4>
                   <p>Tôn vinh cá nhân và tập thể xuất sắc bằng hiệu ứng chuyển động.</p>
@@ -212,7 +215,7 @@
                 </ul>
               </article>
               <article class="pf-card" data-layer="card" id="pf-web-ganlogo">
-                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Brand Image Studio (GanLoGo)"><img src="assets/img/web-ganlogo-900.webp" alt="" width="900" height="443" loading="lazy"><span class="pf-count">1 ảnh</span></button>
+                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Brand Image Studio (GanLoGo)"><img src="assets/img/web-ganlogo-900.webp" alt="" width="900" height="443" loading="lazy" decoding="async"><span class="pf-count">1 ảnh</span></button>
                 <div class="pf-t">
                   <h4>Brand Image Studio (GanLoGo)</h4>
                   <p>Gắn logo, khung avatar hàng loạt cho ảnh nhân sự ngay trên trình duyệt.</p>
@@ -227,7 +230,7 @@
                 </ul>
               </article>
               <article class="pf-card" data-layer="card" id="pf-web-ai-studio">
-                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 2 ảnh AI Agency Studio"><img src="assets/img/web-ai-studio-2-900.webp" alt="" width="900" height="429" loading="lazy"><span class="pf-count">2 ảnh</span></button>
+                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 2 ảnh AI Agency Studio"><img src="assets/img/web-ai-studio-2-900.webp" alt="" width="900" height="429" loading="lazy" decoding="async"><span class="pf-count">2 ảnh</span></button>
                 <div class="pf-t">
                   <span class="pf-status"><i></i>Đang phát triển</span>
                   <h4>AI Agency Studio</h4>
@@ -245,7 +248,7 @@
                 </ul>
               </article>
               <article class="pf-card" data-layer="card" id="pf-web-portfolio">
-                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Portfolio cá nhân"><img src="assets/img/site-cover.jpg" alt="" width="1440" height="810" loading="lazy"><span class="pf-count">1 ảnh</span></button>
+                <button class="pf-cover pf-shot" type="button" data-pf aria-label="Xem 1 ảnh Portfolio cá nhân"><img src="assets/img/site-cover.jpg" alt="" width="1440" height="810" loading="lazy" decoding="async"><span class="pf-count">1 ảnh</span></button>
                 <div class="pf-t">
                   <h4>Portfolio cá nhân</h4>
                   <p>Chính trang này: phim 3D mở đầu, giao diện vàng, xem tốt trên điện thoại.</p>
@@ -264,7 +267,7 @@
           <h3 class="vh">Thiết kế đồ họa và truyền thông</h3>
           <div class="pf-grid">
               <article class="pf-card pf-wide" data-layer="card" id="pf-san-khau-moi">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 5 ảnh Sân Khấu Mới — Nhà hát Trần Hữu Trang"><img src="assets/img/skm-co-trang-900.webp" alt="" width="900" height="506" loading="lazy"><img src="assets/img/skm-mot-moi-tinh-900.webp" alt="" width="900" height="506" loading="lazy"><span class="pf-count">5 ảnh</span></button>
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 5 ảnh Sân Khấu Mới — Nhà hát Trần Hữu Trang"><img src="assets/img/skm-co-trang-900.webp" alt="" width="900" height="506" loading="lazy" decoding="async"><img src="assets/img/skm-mot-moi-tinh-900.webp" alt="" width="900" height="506" loading="lazy" decoding="async"><span class="pf-count">5 ảnh</span></button>
                 <div class="pf-t">
                   <span class="pf-when"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg>10/2026</span>
                   <h4>Sân Khấu Mới&nbsp;— Nhà hát Trần Hữu Trang</h4>
@@ -283,7 +286,7 @@
                 </ul>
               </article>
               <article class="pf-card" data-layer="card" id="pf-leadership">
-                <button class="pf-cover pf-vid" type="button" data-pf aria-label="Xem 2 video Leadership — Sói Đầu Đàn"><img src="assets/img/soi-dau-dan-poster.webp" alt="" width="720" height="1280" loading="lazy" style="object-position:50% 62%"><img src="assets/img/marketing-thuc-chien-poster.webp" alt="" width="720" height="1280" loading="lazy" style="object-position:50% 40%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">2 video</span></button>
+                <button class="pf-cover pf-vid" type="button" data-pf aria-label="Xem 2 video Leadership — Sói Đầu Đàn"><img src="assets/img/soi-dau-dan-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 62%"><img src="assets/img/marketing-thuc-chien-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 40%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">2 video</span></button>
                 <div class="pf-t">
                   <span class="pf-when"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg>10/2026</span>
                   <h4>Leadership&nbsp;— Sói Đầu Đàn</h4>
@@ -296,7 +299,7 @@
                 </ul>
               </article>
               <article class="pf-card" data-layer="card" id="pf-nai-con">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 6 ảnh Linh vật Nai Con — Unite Group"><img src="assets/img/nai-con-chan-dung-900.webp" alt="" width="900" height="851" loading="lazy" style="object-position:50% 40%"><span class="pf-count">6 ảnh</span></button>
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 6 ảnh Linh vật Nai Con — Unite Group"><img src="assets/img/nai-con-chan-dung-900.webp" alt="" width="900" height="851" loading="lazy" decoding="async" style="object-position:50% 40%"><span class="pf-count">6 ảnh</span></button>
                 <div class="pf-t">
                   <h4>Linh vật Nai Con&nbsp;— Unite Group</h4>
                   <p>Mascot cho fanpage: bộ nhận diện, bảng biểu cảm và bài đăng tương tác.</p>
@@ -315,7 +318,7 @@
                 </ul>
               </article>
               <article class="pf-card pf-span-3 pf-posters" data-layer="card" id="pf-fanpage">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 13 ảnh Ấn phẩm Fanpage Unite Group"><img src="assets/img/fp-best-seller-1-900.webp" alt="" width="720" height="900" loading="lazy"><img src="assets/img/fp-thang-doi-900.webp" alt="" width="900" height="900" loading="lazy"><img src="assets/img/fp-lam-it-900.webp" alt="" width="720" height="900" loading="lazy"><img src="assets/img/fp-quyen-loi-900.webp" alt="" width="720" height="900" loading="lazy"><img src="assets/img/fp-luong-ve-900.webp" alt="" width="720" height="900" loading="lazy"><span class="pf-count">13 ảnh</span></button>
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 13 ảnh Ấn phẩm Fanpage Unite Group"><img src="assets/img/fp-best-seller-1-900.webp" alt="" width="720" height="900" loading="lazy" decoding="async"><img src="assets/img/fp-thang-doi-900.webp" alt="" width="900" height="900" loading="lazy" decoding="async"><img src="assets/img/fp-lam-it-900.webp" alt="" width="720" height="900" loading="lazy" decoding="async"><img src="assets/img/fp-quyen-loi-900.webp" alt="" width="720" height="900" loading="lazy" decoding="async"><img src="assets/img/fp-luong-ve-900.webp" alt="" width="720" height="900" loading="lazy" decoding="async"><span class="pf-count">13 ảnh</span></button>
                 <div class="pf-t">
                   <h4>Ấn phẩm Fanpage Unite Group</h4>
                   <p>Bài đăng hằng tuần: vinh danh, tuyển dụng, thông điệp nội bộ và các series tương tác.</p>
@@ -341,7 +344,7 @@
                 </ul>
               </article>
               <article class="pf-card pf-logo pf-posters" data-layer="card" id="pf-logo">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 2 ảnh Biểu trưng cá nhân PT"><img src="assets/img/logo-pt-900.webp" alt="" width="900" height="900" loading="lazy"><img src="assets/img/logo-pt-mockup-900.webp" alt="" width="900" height="672" loading="lazy"><span class="pf-count">2 ảnh</span></button>
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 2 ảnh Biểu trưng cá nhân PT"><img src="assets/img/logo-pt-900.webp" alt="" width="900" height="900" loading="lazy" decoding="async"><img src="assets/img/logo-pt-mockup-900.webp" alt="" width="900" height="672" loading="lazy" decoding="async"><span class="pf-count">2 ảnh</span></button>
                 <div class="pf-t">
                   <h4>Biểu trưng cá nhân PT</h4>
                   <p>Monogram P và T như dải ruy băng vàng kim, dùng cho web, CV và mạng xã hội.</p>
@@ -358,7 +361,7 @@
           <h3 class="vh">Sản xuất video và nội dung</h3>
           <div class="pf-grid pf-tall">
               <article class="pf-card" data-layer="card" id="pf-fight100">
-                <a class="pf-cover pf-vid" href="https://www.tiktok.com/@linh.trng.i.koko/video/7703094446128205077" target="_blank" rel="noopener" aria-label="Xem vlog Fight100 trên TikTok"><img src="assets/img/fight100-900.webp" alt="" width="507" height="900" loading="lazy" style="object-position:50% 50%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">TikTok</span></a>
+                <a class="pf-cover pf-vid" href="https://www.tiktok.com/@linh.trng.i.koko/video/7703094446128205077" target="_blank" rel="noopener" aria-label="Xem vlog Fight100 trên TikTok"><img src="assets/img/fight100-900.webp" alt="" width="507" height="900" loading="lazy" decoding="async" style="object-position:50% 50%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">TikTok</span></a>
                 <div class="pf-t">
                   <h4>Vlog trải nghiệm Boxing&nbsp;— Fight100</h4>
                   <p>Ý tưởng, kịch bản, quay và dựng vlog buổi tập boxing tại CLB Fight100.</p>
@@ -369,7 +372,7 @@
                 </div>
               </article>
               <article class="pf-card" data-layer="card" id="pf-tiktok-ceo">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 2 ảnh Kênh TikTok CEO Unite Group"><img src="assets/img/tiktok-ceo-video-900.webp" alt="" width="406" height="539" loading="lazy" style="object-position:50% 40%"><img src="assets/img/tiktok-ceo-kenh-900.webp" alt="" width="674" height="900" loading="lazy" style="object-position:50% 0"><span class="pf-count">2 ảnh</span></button>
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 2 ảnh Kênh TikTok CEO Unite Group"><img src="assets/img/tiktok-ceo-video-900.webp" alt="" width="406" height="539" loading="lazy" decoding="async" style="object-position:50% 40%"><img src="assets/img/tiktok-ceo-kenh-900.webp" alt="" width="674" height="900" loading="lazy" decoding="async" style="object-position:50% 0"><span class="pf-count">2 ảnh</span></button>
                 <div class="pf-t">
                   <span class="pf-when"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg>Từ 12/2025</span>
                   <h4>Kênh TikTok CEO Unite Group</h4>
@@ -385,7 +388,7 @@
                 </ul>
               </article>
               <article class="pf-card pf-wide" data-layer="card" id="pf-ai-motion">
-                <button class="pf-cover pf-vid" type="button" data-pf aria-label="Xem 3 video AI Motion — TT Genesis"><img src="assets/img/tt-genesis-du-an-poster.webp" alt="" width="720" height="1280" loading="lazy" style="object-position:50% 74%"><img src="assets/img/tt-genesis-ban-do-poster.webp" alt="" width="720" height="1280" loading="lazy" style="object-position:50% 74%"><img src="assets/img/tt-genesis-hieu-ung-poster.webp" alt="" width="720" height="1280" loading="lazy" style="object-position:50% 70%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">3 video</span></button>
+                <button class="pf-cover pf-vid" type="button" data-pf aria-label="Xem 3 video AI Motion — TT Genesis"><img src="assets/img/tt-genesis-du-an-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 74%"><img src="assets/img/tt-genesis-ban-do-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 74%"><img src="assets/img/tt-genesis-hieu-ung-poster.webp" alt="" width="720" height="1280" loading="lazy" decoding="async" style="object-position:50% 70%"><span class="pf-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.8v12.4a.8.8 0 0 0 1.2.7l9.6-6.2a.8.8 0 0 0 0-1.4L9.7 5.1a.8.8 0 0 0-1.2.7z"/></svg></span><span class="pf-count">3 video</span></button>
                 <div class="pf-t">
                   <h4>AI Motion&nbsp;— TT Genesis</h4>
                   <p>Video dọc giới thiệu dự án bất động sản: bản đồ phát sáng, số liệu chuyển động, hiệu ứng điện ảnh.</p>
@@ -403,7 +406,7 @@
           <h3 class="vh">Nhiếp ảnh và hậu kỳ</h3>
           <div class="pf-grid pf-photos">
               <article class="pf-card pf-wide" data-layer="card" id="pf-chan-dung">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 7 ảnh Chân dung nghệ thuật"><img src="assets/img/cd-van-phong-900.webp" alt="" width="600" height="900" loading="lazy"><img src="assets/img/bida-900.webp" alt="" width="900" height="1351" loading="lazy"><img src="assets/img/cd-xe-moi-900.webp" alt="" width="600" height="900" loading="lazy"><span class="pf-count">7 ảnh</span></button>
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 7 ảnh Chân dung nghệ thuật"><img src="assets/img/cd-van-phong-900.webp" alt="" width="600" height="900" loading="lazy" decoding="async"><img src="assets/img/bida-900.webp" alt="" width="900" height="1351" loading="lazy" decoding="async"><img src="assets/img/cd-xe-moi-900.webp" alt="" width="600" height="900" loading="lazy" decoding="async"><span class="pf-count">7 ảnh</span></button>
                 <div class="pf-t">
                   <h4>Chân dung nghệ thuật</h4>
                   <p>Ánh sáng tự nhiên lẫn flash; color grading và retouch da tự nhiên.</p>
@@ -419,7 +422,7 @@
                 </ul>
               </article>
               <article class="pf-card pf-wide" data-layer="card" id="pf-su-kien-cong-dong">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 17 ảnh Sự kiện cộng đồng"><img src="assets/img/cong-dong-long-900.webp" alt="" width="900" height="600" loading="lazy"><img src="assets/img/uyen-uong-900.webp" alt="" width="900" height="600" loading="lazy"><img src="assets/img/cong-dong-la-co-900.webp" alt="" width="900" height="600" loading="lazy"><span class="pf-count">17 ảnh</span></button>
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 17 ảnh Sự kiện cộng đồng"><img src="assets/img/cong-dong-long-900.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><img src="assets/img/uyen-uong-900.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><img src="assets/img/cong-dong-la-co-900.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><span class="pf-count">17 ảnh</span></button>
                 <div class="pf-t">
                   <h4>Sự kiện cộng đồng</h4>
                   <p>Lễ hội, diễu hành cổ phục và đêm diễn ngoài trời.</p>
@@ -445,7 +448,7 @@
                 </ul>
               </article>
               <article class="pf-card pf-wide" data-layer="card" id="pf-su-kien-doanh-nghiep">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 5 ảnh Sự kiện doanh nghiệp"><img src="assets/img/dn-ky-ket-900.webp" alt="" width="900" height="675" loading="lazy"><img src="assets/img/dn-khoanh-khac-900.webp" alt="" width="900" height="600" loading="lazy"><img src="assets/img/dn-gian-hang-900.webp" alt="" width="900" height="600" loading="lazy"><span class="pf-count">5 ảnh</span></button>
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 5 ảnh Sự kiện doanh nghiệp"><img src="assets/img/dn-ky-ket-900.webp" alt="" width="900" height="675" loading="lazy" decoding="async"><img src="assets/img/dn-khoanh-khac-900.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><img src="assets/img/dn-gian-hang-900.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><span class="pf-count">5 ảnh</span></button>
                 <div class="pf-t">
                   <h4>Sự kiện doanh nghiệp</h4>
                   <p>Ngày hội tuyển dụng, lễ ký kết hợp tác và hoạt động nội bộ.</p>
@@ -459,7 +462,7 @@
                 </ul>
               </article>
               <article class="pf-card pf-wide" data-layer="card" id="pf-noi-that">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 5 ảnh Nội thất &amp; Kiến trúc"><img src="assets/img/nt-phong-an-900.webp" alt="" width="900" height="675" loading="lazy"><img src="assets/img/nt-ho-boi-900.webp" alt="" width="675" height="900" loading="lazy"><img src="assets/img/hanh-lang-900.webp" alt="" width="900" height="921" loading="lazy"><span class="pf-count">5 ảnh</span></button>
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 5 ảnh Nội thất &amp; Kiến trúc"><img src="assets/img/nt-phong-an-900.webp" alt="" width="900" height="675" loading="lazy" decoding="async"><img src="assets/img/nt-ho-boi-900.webp" alt="" width="675" height="900" loading="lazy" decoding="async"><img src="assets/img/hanh-lang-900.webp" alt="" width="900" height="921" loading="lazy" decoding="async"><span class="pf-count">5 ảnh</span></button>
                 <div class="pf-t">
                   <h4>Nội thất &amp; Kiến trúc</h4>
                   <p>Căn hộ, phòng nghỉ và tòa nhà: đường gióng thẳng, ánh sáng không gian dịu.</p>
@@ -473,7 +476,7 @@
                 </ul>
               </article>
               <article class="pf-card pf-wide" data-layer="card" id="pf-san-pham">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 5 ảnh Sản phẩm thương mại"><img src="assets/img/sp-packshot-900.webp" alt="" width="900" height="600" loading="lazy"><img src="assets/img/sp-tinh-chat-900.webp" alt="" width="900" height="675" loading="lazy"><img src="assets/img/sp-toan-canh-900.webp" alt="" width="600" height="900" loading="lazy"><span class="pf-count">5 ảnh</span></button>
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 5 ảnh Sản phẩm thương mại"><img src="assets/img/sp-packshot-900.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><img src="assets/img/sp-tinh-chat-900.webp" alt="" width="900" height="675" loading="lazy" decoding="async"><img src="assets/img/sp-toan-canh-900.webp" alt="" width="600" height="900" loading="lazy" decoding="async"><span class="pf-count">5 ảnh</span></button>
                 <div class="pf-t">
                   <h4>Sản phẩm thương mại</h4>
                   <p>Packshot và key visual quảng cáo cho dòng dầu gội thảo dược.</p>
@@ -487,7 +490,7 @@
                 </ul>
               </article>
               <article class="pf-card pf-wide" data-layer="card" id="pf-phong-canh">
-                <button class="pf-cover" type="button" data-pf aria-label="Xem 10 ảnh Phong cảnh &amp; Đời sống"><img src="assets/img/pc-suong-som-900.webp" alt="" width="900" height="675" loading="lazy"><img src="assets/img/pho-song-900.webp" alt="" width="900" height="675" loading="lazy"><img src="assets/img/pc-dien-gio-900.webp" alt="" width="675" height="900" loading="lazy"><span class="pf-count">10 ảnh</span></button>
+                <button class="pf-cover" type="button" data-pf aria-label="Xem 10 ảnh Phong cảnh &amp; Đời sống"><img src="assets/img/pc-suong-som-900.webp" alt="" width="900" height="675" loading="lazy" decoding="async"><img src="assets/img/pho-song-900.webp" alt="" width="900" height="675" loading="lazy" decoding="async"><img src="assets/img/pc-dien-gio-900.webp" alt="" width="675" height="900" loading="lazy" decoding="async"><span class="pf-count">10 ảnh</span></button>
                 <div class="pf-t">
                   <h4>Phong cảnh &amp; Đời sống</h4>
                   <p>Bình minh vùng cao, thành phố về đêm và khoảnh khắc đời thường.</p>
@@ -681,7 +684,7 @@
       </div>
     </section>
   </main>
-  <span class="tile tile-hi" data-layer="tile-hi" aria-hidden="true"><img src="assets/img/logo-mark.png" alt=""></span>
+  <span class="tile-hi" data-layer="tile-hi" aria-hidden="true"><img src="assets/img/logo-3d.webp" alt=""></span>
 </div>
 
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Xem ảnh và video">
@@ -700,5 +703,6 @@
 
 <script src="assets/site.js"></script>
 <script src="assets/film.js"></script>
+<script src="assets/fx.js"></script>
 </body>
 </html>

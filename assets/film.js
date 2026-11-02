@@ -91,6 +91,7 @@
   var handedOver = false;
   function goSite() {
     handedOver = true;
+    try { window.dispatchEvent(new Event('npt:site')); } catch (e) {}
     var site = doc.getElementById('site');
     if (site) site.scrollIntoView({ behavior: REDUCED ? 'auto' : 'smooth', block: 'start' });
   }
@@ -506,10 +507,13 @@
       [sx1 + 86 * s, L.cy - 330 * s, 0.94, 72 * s],
       [sx1 + 112 * s, L.cy + 200 * s, 0.92, 60 * s]
     ];
-    TILES = DATA.layers.filter(function (l) { return l.role === 'logo-tile'; }).map(function (l, i) {
+    // the page has one gold monogram; the film lets it split into four that fly off and come back
+    var src = DATA.layers.filter(function (l) { return l.role === 'logo-tile'; });
+    if (src.length === 1) src = [src[0], src[0], src[0], src[0]];
+    TILES = src.slice(0, 4).map(function (l, i) {
       var p = fr(hang[i][0], hang[i][1]);
       var W1 = unproject(cam135, p[0], p[1], hang[i][2]);
-      return { i: i, start: [l.x + l.w / 2, l.y + l.h / 2, 2], size0: l.w, hang: W1, hangSize: hang[i][3], end: end[i], over: over[i] };
+      return { i: i, start: [l.x + l.w / 2, l.y + l.h / 2, 2], size0: l.w, hang: W1, hangSize: hang[i][3], end: end[i], over: over[i], twin: i > 0 && l === src[0] };
     });
   }
   function tileState(T, t, cam) {
@@ -520,7 +524,7 @@
       var arc = Math.sin(Math.PI * e) * 120;
       var P = [lerp(T.start[0], T.hang[0], e), lerp(T.start[1], T.hang[1], e), lerp(T.start[2], T.hang[2], e) + arc];
       var trail = s5(1.2, 2.4, t) * 300; P[1] += trail;
-      return { P: P, size: lerp(T.size0, T.hangSize, e), phi: lerp(0, 50 * DEG, e) };
+      return { P: P, size: lerp(T.size0, T.hangSize, e), phi: lerp(0, 50 * DEG, e), a: T.twin ? s5(0.1 + 0.07 * i, 0.55 + 0.07 * i, t) : 1 };
     }
     if (i === 1 && t > 4.9 + TL.toff && t < 5.95 + TL.toff) {
       var u = (t - 4.95 - TL.toff) / 0.9, s = LAY.portrait ? LAY.fs : LAY.s;
@@ -727,11 +731,12 @@
     }
     if (zc < 420) {
       gl.drawBuffers(DB_COLOR); gl.useProgram(P_SH.p); setCam(P_SH, cam);
-      var cxw = O[0] + Eu[0] / 2, cyw = O[1] + (Ev[1]) / 2, half = size / 2, foot = ts.cam ? half : half * Math.cos(ts.phi);
-      shadow(cam, cxw - half + 0.10 * zc, cyw - foot + 4 + 0.36 * zc, cxw + half + 0.10 * zc, cyw + foot + 4 + 0.36 * zc, size * 0.28, (7 + 0.5 * zc) / 2, 0.26 * (1 - sstep(220, 420, zc)));
+      // a soft round shadow under the monogram (it has no tile around it)
+      var cxw = O[0] + Eu[0] / 2, cyw = O[1] + (Ev[1]) / 2, half = size * 0.3, foot = ts.cam ? half : half * Math.cos(ts.phi);
+      shadow(cam, cxw - half + 0.10 * zc, cyw - foot + 4 + 0.36 * zc, cxw + half + 0.10 * zc, cyw + foot + 4 + 0.36 * zc, half, (9 + 0.5 * zc) / 2, 0.2 * (ts.a == null ? 1 : ts.a) * (1 - sstep(220, 420, zc)));
     }
     gl.drawBuffers(DB_BOTH); gl.useProgram(P_TEX.p); setCam(P_TEX, cam); setCommon(P_TEX, focus);
-    var u = P_TEX.u; gl.uniform1f(u.uA, 1); gl.uniform1f(u.uMaskOn, 0); gl.uniform1f(u.uPieceFade, 0); gl.uniform1f(u.uHaze, 0);
+    var u = P_TEX.u; gl.uniform1f(u.uA, ts.a == null ? 1 : ts.a); gl.uniform1f(u.uMaskOn, 0); gl.uniform1f(u.uPieceFade, 0); gl.uniform1f(u.uHaze, 0);
     gl.uniform4f(u.uTint, 0, 0, 0, 0); gl.uniform4f(u.uEdge, 0, 0, 0, 0);
     gl.bindTexture(gl.TEXTURE_2D, tex); quad(P_TEX, O, Eu, Ev);
   }

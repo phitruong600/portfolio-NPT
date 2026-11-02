@@ -10,6 +10,14 @@ Giới thiệu (ảnh chân dung, tên, vài dòng về mình) · Năng lực ·
 Phim mở đầu chạy xong sẽ tự cuộn xuống đầu trang; bấm "Bỏ qua" để xuống ngay.
 Tên các app và công cụ hiện bằng icon nét vàng; rê chuột vào icon để thấy tên.
 
+Hiệu ứng:
+
+- Logo PT vàng 3D ở góc ảnh chân dung tự xoay nhiều hướng; kéo chuột (hoặc vuốt) để tự xoay.
+- Nền trang là hàng ngàn hạt bụi vàng: tụ thành logo PT lớn quanh ảnh chân dung, tan thành bụi khi cuộn đọc, rồi tụ lại ở mục Liên hệ. Rê chuột hoặc lướt ngón tay qua thì các hạt dạt ra.
+- Các thẻ là kính mờ viền vàng: trên máy tính thẻ nghiêng 3D và loé sáng theo con trỏ; trên điện thoại có vệt sáng lướt qua khi thẻ hiện ra và các thẻ xoay 3D khi vuốt ngang.
+- Bộ thẻ ở mục Dự án tự xoay; dòng chữ bên dưới ghi tên nhóm, số ảnh và vị trí (03 / 05). Bấm tên nhóm để xem bộ ảnh.
+- Người dùng bật "giảm chuyển động" trong máy sẽ thấy bản tĩnh (logo ảnh, không có bụi).
+
 Mục Dự án chia bốn thẻ (bấm ảnh bìa để xem trọn bộ ảnh hoặc video):
 
 - Sản phẩm số & Công cụ: trang tuyển dụng, Unite Staycation, bảng vinh danh, GanLoGo, AI Agency Studio, chính trang portfolio này (kèm link trải nghiệm và mã nguồn)
@@ -30,6 +38,8 @@ Màu chính: Vàng ấm #E5C158, Champagne #F9F6F0, Ngà #FFFBF5, Đồng #8C6A3
 - `assets/site.css`, `assets/site.js`: giao diện, menu, nút Zalo nổi, thẻ chia nhóm dự án, bộ ảnh và video của từng dự án, xem ảnh lớn
 - bộ icon nằm ngay đầu `index.html` (khối `<svg class="sprite">`)
 - `assets/film.js`: phim mở đầu; mọi khung hình được tính từ thời gian (hàm `seek(t)`)
+- `assets/fx.js`: logo vàng 3D và nền bụi vàng (dùng three.js trong `assets/vendor/three.min.js`, chỉ tải khi đã xuống tới trang)
+- `assets/img/logo-3d.webp`: ảnh tĩnh của logo 3D (hiện trước khi logo 3D chạy và trong phim)
 - `assets/film/`: ảnh chụp trang và các lớp nổi mà phim dùng
 - `assets/img/`: ảnh đã nén cho web (bản 900 px cho trang, bản 1600–1800 px khi xem lớn), logo PT, ảnh chia sẻ mạng xã hội `og-cover.jpg`
 - `assets/video/`: video dọc nén cho web (Sói Đầu Đàn, Marketing Thực Chiến, TT Genesis)
